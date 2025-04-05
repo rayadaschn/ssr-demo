@@ -3,44 +3,88 @@ import { renderToString } from 'react-dom/server'
 import App from '@/App'
 import { StaticRouter } from 'react-router-dom/server'
 import routesConfig from '../routesConfig'
+import { matchRoutes } from 'react-router-dom'
 
 const express = require('express')
 const path = require('path')
 const proxy = require('express-http-proxy')
 
 const app = express()
-// app.use('/api', proxy('http://localhost:3007'), {
-//   proxyReqPathResolver: (req) => {
-//     return '/api' + req.url
-//   },
-// })
+
+app.use(
+  '/api',
+  proxy('http://localhost:3007', {
+    proxyReqPathResolver: (req) => {
+      console.log('🚀 代理路径:', req.url)
+      return req.originalUrl // 或者 return req.url.replace(/^\/api/, '')
+    },
+    onError: (err, req, res) => {
+      console.error('Proxy Error:', err)
+      res.status(500).send('Proxy Error')
+    },
+  }),
+)
 
 // 处理静态资源
 app.use(express.static(path.resolve(__dirname, '../public')))
 
-// 这里路由匹配有点问题, 暂时这么写
-routesConfig.forEach(({ path }) => {
-  app.get(path, (req, res) => {
-    const html = renderToString(
-      <StaticRouter location={req.url}>
-        <App />
-      </StaticRouter>,
+// 处理 store
+import { getServerStore } from '../store'
+
+app.get('*', (req, res) => {
+  const store = getServerStore()
+  // console.log('🚀 ~ app.get ~ store:', store)
+
+  const routeMatches = matchRoutes(routesConfig, { pathname: req.url })
+  if (routeMatches) {
+    // console.log('🚀 ~ app.get ~ routeMatches:', routeMatches)
+    const loadDataPromises = routeMatches
+      .map((match) => {
+        const loadData = match.route.element.type?.loadData
+
+        if (typeof loadData !== 'function') return Promise.resolve()
+        // console.log('🚀 ~ loadDataPromises ~ loadData:', loadData)
+
+        return loadData(store).then(
+          (data) => data,
+          (error) => error,
+        )
+      })
+      .filter(Boolean)
+
+    Promise.all(loadDataPromises).then(
+      (data) => {
+        const html = renderToString(
+          <StaticRouter location={req.url}>
+            <App store={store} />
+          </StaticRouter>,
+        )
+        res.send(`
+          <!DOCTYPE html>
+          <html lang="en">
+            <head>
+              <meta charset="UTF-8" />
+              <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+              <title>SSR</title>
+            </head>
+            <body>
+              <div id="root">${html}</div>
+              <script>
+                // 客户端全局挂载服务端的 store
+                var context = {
+                  store: ${JSON.stringify(store.getState())}
+                }
+              </script>
+              <script src="/client.js"></script>
+            </body>
+          </html>
+        `)
+      },
+      (error) => {
+        console.log('失败,', error)
+      },
     )
-    res.send(`
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SSR</title>
-      </head>
-      <body>
-        <div id="root">${html}</div>
-        <script src="/client.js"></script>
-      </body>
-    </html>
-  `)
-  })
+  }
 })
 
 app.listen(3000, () => {

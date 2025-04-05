@@ -4,7 +4,7 @@ const initiateState = {
   list: [],
 }
 function user(state = initiateState, action) {
-  console.log('🚀 ~ user ~ state:', state)
+  // console.log('🚀 ~ user ~ state:', state)
   switch (action.type) {
     case SET_USER_LIST:
       return {
