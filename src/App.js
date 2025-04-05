@@ -3,10 +3,11 @@ import { useRoutes } from 'react-router-dom'
 import routesConfig from './routesConfig'
 import Header from './components/Header'
 import { Provider } from 'react-redux'
-import { getStore } from './store'
 
+import { getStore } from './store'
 const store = getStore()
 
+// 在 App 中解构 store 属性即可
 function App() {
   return (
     <Provider store={store}>

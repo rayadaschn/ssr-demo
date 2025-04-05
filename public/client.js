@@ -42194,6 +42194,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var store = (0,_store__WEBPACK_IMPORTED_MODULE_3__.getStore)();
+
+// 在 App 中解构 store 属性即可
 function App() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_4__.Provider, {
     store: store
@@ -42400,6 +42402,12 @@ function UserList() {
     }, user.name);
   }));
 }
+
+// 当有路由组件在服务端获取数据的方法
+UserList.loadData = function (store) {
+  // 等待异步操作完成, 就可以用仓库的数据进行渲染
+  return store.dispatch(_store_actionCreators_user__WEBPACK_IMPORTED_MODULE_1__["default"].getUserList());
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (UserList);
 
 /***/ }),

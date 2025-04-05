@@ -2,11 +2,19 @@ import React from 'react'
 import { renderToString } from 'react-dom/server'
 import App from '@/App'
 import { StaticRouter } from 'react-router-dom/server'
-const express = require('express')
-const path = require('path')
 import routesConfig from '../routesConfig'
 
+const express = require('express')
+const path = require('path')
+const proxy = require('express-http-proxy')
+
 const app = express()
+// app.use('/api', proxy('http://localhost:3007'), {
+//   proxyReqPathResolver: (req) => {
+//     return '/api' + req.url
+//   },
+// })
+
 // 处理静态资源
 app.use(express.static(path.resolve(__dirname, '../public')))
 

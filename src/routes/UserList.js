@@ -21,4 +21,10 @@ function UserList() {
   )
 }
 
+// 当有路由组件在服务端获取数据的方法
+UserList.loadData = (store) => {
+  // 等待异步操作完成, 就可以用仓库的数据进行渲染
+  return store.dispatch(actionCreators.getUserList())
+}
+
 export default UserList
