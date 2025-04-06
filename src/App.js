@@ -3,6 +3,7 @@ import { useRoutes } from 'react-router-dom'
 import routesConfig from './routesConfig'
 import Header from './components/Header'
 import { Provider } from 'react-redux'
+import actionCreators from './store/actionCreators/auth'
 
 // import { getStore } from './store'
 // const store = getStore()
@@ -18,4 +19,7 @@ function App({ store }) {
   )
 }
 
+App.loadData = (store) => {
+  return store.dispatch(actionCreators.validate())
+}
 export default App

@@ -20,6 +20,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Header */ "./src/components/Header.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _store_actionCreators_auth__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./store/actionCreators/auth */ "./src/store/actionCreators/auth.js");
+
 
 
 
@@ -37,6 +39,9 @@ function App(_ref) {
     store: store
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_3__["default"], null), (0,react_router_dom__WEBPACK_IMPORTED_MODULE_1__.useRoutes)(_routesConfig__WEBPACK_IMPORTED_MODULE_2__["default"]));
 }
+App.loadData = function (store) {
+  return store.dispatch(_store_actionCreators_auth__WEBPACK_IMPORTED_MODULE_5__["default"].validate());
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
 
 /***/ }),
@@ -243,12 +248,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "react-router-dom");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_router_dom__WEBPACK_IMPORTED_MODULE_2__);
+
 
 
 function Profile() {
   var user = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.auth.user;
   });
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_2__.useNavigate)();
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (!user) {
+      navigate('/login');
+    }
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "\u5F53\u524D\u767B\u5F55\u7528\u6237"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "name: ", user && user.name));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Profile);
@@ -448,9 +462,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "axios");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 
-var request = axios__WEBPACK_IMPORTED_MODULE_0___default().create({
-  baseURL: 'http://localhost:3007'
-});
+var request = function request(req) {
+  var cookie = req.get('cookie') || '';
+  return axios__WEBPACK_IMPORTED_MODULE_0___default().create({
+    baseURL: 'http://localhost:3007',
+    headers: {
+      cookie: cookie
+    }
+  });
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (request);
 
 /***/ }),
@@ -493,7 +513,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action-types */ "./src/store/action-types.js");
+/* harmony import */ var redux_first_history__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-first-history */ "redux-first-history");
+/* harmony import */ var redux_first_history__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(redux_first_history__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../action-types */ "./src/store/action-types.js");
+
 
 var actionCreators = {
   login: function login(user) {
@@ -505,12 +528,13 @@ var actionCreators = {
           error = _res$data.error;
         if (success) {
           dispatch({
-            type: _action_types__WEBPACK_IMPORTED_MODULE_0__.LOGIN_SUCCESS,
+            type: _action_types__WEBPACK_IMPORTED_MODULE_1__.LOGIN_SUCCESS,
             payload: data // 用户列表的数组
           });
+          dispatch((0,redux_first_history__WEBPACK_IMPORTED_MODULE_0__.push)('/profile'));
         } else {
           dispatch({
-            type: _action_types__WEBPACK_IMPORTED_MODULE_0__.LOGIN_ERROR,
+            type: _action_types__WEBPACK_IMPORTED_MODULE_1__.LOGIN_ERROR,
             payload: error // 失败原因
           });
         }
@@ -524,9 +548,26 @@ var actionCreators = {
           data = _res$data2.data,
           success = _res$data2.success,
           error = _res$data2.error;
+        console.log('🚀 ~ returnrequest.post ~ res.data:', res.data);
         if (success) {
           dispatch({
-            type: _action_types__WEBPACK_IMPORTED_MODULE_0__.LOGOUT_SUCCESS,
+            type: _action_types__WEBPACK_IMPORTED_MODULE_1__.LOGOUT_SUCCESS,
+            payload: data // 用户列表的数组
+          });
+          dispatch((0,redux_first_history__WEBPACK_IMPORTED_MODULE_0__.push)('/login'));
+        }
+      });
+    };
+  },
+  validate: function validate() {
+    return function (dispatch, getState, request) {
+      return request.post('/api/validate').then(function (res) {
+        var _res$data3 = res.data,
+          data = _res$data3.data,
+          success = _res$data3.success;
+        if (success) {
+          dispatch({
+            type: _action_types__WEBPACK_IMPORTED_MODULE_1__.LOGIN_SUCCESS,
             payload: data // 用户列表的数组
           });
         }
@@ -622,9 +663,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _client_request__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/client/request */ "./src/client/request.js");
 /* harmony import */ var _server_request__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/server/request */ "./src/server/request.js");
-/* harmony import */ var _reducers_counter__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./reducers/counter */ "./src/store/reducers/counter.js");
-/* harmony import */ var _reducers_user__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./reducers/user */ "./src/store/reducers/user.js");
-/* harmony import */ var _reducers_auth__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./reducers/auth */ "./src/store/reducers/auth.js");
+/* harmony import */ var history__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! history */ "history");
+/* harmony import */ var history__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(history__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var redux_first_history__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! redux-first-history */ "redux-first-history");
+/* harmony import */ var redux_first_history__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(redux_first_history__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _reducers_counter__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./reducers/counter */ "./src/store/reducers/counter.js");
+/* harmony import */ var _reducers_user__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./reducers/user */ "./src/store/reducers/user.js");
+/* harmony import */ var _reducers_auth__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./reducers/auth */ "./src/store/reducers/auth.js");
 
 
 
@@ -634,13 +679,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var reducers = {
-  counter: _reducers_counter__WEBPACK_IMPORTED_MODULE_6__["default"],
-  user: _reducers_user__WEBPACK_IMPORTED_MODULE_7__["default"],
-  auth: _reducers_auth__WEBPACK_IMPORTED_MODULE_8__["default"]
-};
-var combineReducer = (0,redux__WEBPACK_IMPORTED_MODULE_0__.combineReducers)(reducers);
-var logger = (0,redux_logger__WEBPACK_IMPORTED_MODULE_3__.createLogger)();
+// import { createReduxHistory, routerMiddleware, routerReducer } from '@/history'
+
+
+
+
+
+// const reducers = {
+//   counter,
+//   user,
+//   auth,
+//   router: routerReducer,
+// }
+// const combineReducer = combineReducers(reducers)
+// const logger = createLogger()
+
 function getClientStore() {
   // const store = applyMiddleware(
   //   thunk.withExtraArgument(clientRequest),
@@ -650,12 +703,50 @@ function getClientStore() {
 
   // 改用服务端的初始值, 将值挂载到 window 全局
   var initialState = window.context.state;
-  var store = (0,redux__WEBPACK_IMPORTED_MODULE_0__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_1___default().withExtraArgument(_client_request__WEBPACK_IMPORTED_MODULE_4__["default"]), (redux_promise__WEBPACK_IMPORTED_MODULE_2___default()), logger)(redux__WEBPACK_IMPORTED_MODULE_0__.createStore)(combineReducer, initialState);
-  return store;
+
+  // history
+  var _createReduxHistoryCo = (0,redux_first_history__WEBPACK_IMPORTED_MODULE_7__.createReduxHistoryContext)({
+      history: (0,history__WEBPACK_IMPORTED_MODULE_6__.createBrowserHistory)()
+    }),
+    createReduxHistory = _createReduxHistoryCo.createReduxHistory,
+    routerMiddleware = _createReduxHistoryCo.routerMiddleware,
+    routerReducer = _createReduxHistoryCo.routerReducer;
+  var reducers = {
+    counter: _reducers_counter__WEBPACK_IMPORTED_MODULE_8__["default"],
+    user: _reducers_user__WEBPACK_IMPORTED_MODULE_9__["default"],
+    auth: _reducers_auth__WEBPACK_IMPORTED_MODULE_10__["default"],
+    router: routerReducer
+  };
+  var combineReducer = (0,redux__WEBPACK_IMPORTED_MODULE_0__.combineReducers)(reducers);
+  var logger = (0,redux_logger__WEBPACK_IMPORTED_MODULE_3__.createLogger)();
+  var store = (0,redux__WEBPACK_IMPORTED_MODULE_0__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_1___default().withExtraArgument(_client_request__WEBPACK_IMPORTED_MODULE_4__["default"]), (redux_promise__WEBPACK_IMPORTED_MODULE_2___default()), routerMiddleware, logger)(redux__WEBPACK_IMPORTED_MODULE_0__.createStore)(combineReducer, initialState);
+  var history = createReduxHistory(store);
+  return {
+    store: store,
+    history: history
+  };
 }
-function getServerStore() {
-  var store = (0,redux__WEBPACK_IMPORTED_MODULE_0__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_1___default().withExtraArgument(_server_request__WEBPACK_IMPORTED_MODULE_5__["default"]), (redux_promise__WEBPACK_IMPORTED_MODULE_2___default()), logger)(redux__WEBPACK_IMPORTED_MODULE_0__.createStore)(combineReducer);
-  return store;
+function getServerStore(req) {
+  var _createReduxHistoryCo2 = (0,redux_first_history__WEBPACK_IMPORTED_MODULE_7__.createReduxHistoryContext)({
+      history: (0,history__WEBPACK_IMPORTED_MODULE_6__.createMemoryHistory)()
+    }),
+    createReduxHistory = _createReduxHistoryCo2.createReduxHistory,
+    routerMiddleware = _createReduxHistoryCo2.routerMiddleware,
+    routerReducer = _createReduxHistoryCo2.routerReducer;
+  var reducers = {
+    counter: _reducers_counter__WEBPACK_IMPORTED_MODULE_8__["default"],
+    user: _reducers_user__WEBPACK_IMPORTED_MODULE_9__["default"],
+    auth: _reducers_auth__WEBPACK_IMPORTED_MODULE_10__["default"],
+    router: routerReducer
+  };
+  var combineReducer = (0,redux__WEBPACK_IMPORTED_MODULE_0__.combineReducers)(reducers);
+  var logger = (0,redux_logger__WEBPACK_IMPORTED_MODULE_3__.createLogger)();
+  var store = (0,redux__WEBPACK_IMPORTED_MODULE_0__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_1___default().withExtraArgument((0,_server_request__WEBPACK_IMPORTED_MODULE_5__["default"])(req)), (redux_promise__WEBPACK_IMPORTED_MODULE_2___default()), routerMiddleware, logger)(redux__WEBPACK_IMPORTED_MODULE_0__.createStore)(combineReducer);
+  var history = createReduxHistory(store);
+  return {
+    store: store,
+    history: history
+  };
 }
 
 /***/ }),
@@ -812,6 +903,16 @@ module.exports = require("express-http-proxy");
 
 /***/ }),
 
+/***/ "history":
+/*!**************************!*\
+  !*** external "history" ***!
+  \**************************/
+/***/ ((module) => {
+
+module.exports = require("history");
+
+/***/ }),
+
 /***/ "path":
 /*!***********************!*\
   !*** external "path" ***!
@@ -879,6 +980,16 @@ module.exports = require("react-router-dom/server");
 /***/ ((module) => {
 
 module.exports = require("redux");
+
+/***/ }),
+
+/***/ "redux-first-history":
+/*!**************************************!*\
+  !*** external "redux-first-history" ***!
+  \**************************************/
+/***/ ((module) => {
+
+module.exports = require("redux-first-history");
 
 /***/ }),
 
@@ -1026,9 +1137,9 @@ app.use(express["static"](path.resolve(__dirname, '../public')));
 // 处理 store
 
 app.get('*', function (req, res) {
-  var store = (0,_store__WEBPACK_IMPORTED_MODULE_6__.getServerStore)();
-  // console.log('🚀 ~ app.get ~ store:', store)
-
+  var _getServerStore = (0,_store__WEBPACK_IMPORTED_MODULE_6__.getServerStore)(req),
+    store = _getServerStore.store;
+  console.log('🚀 ~ app.get ~ store:', store);
   var routeMatches = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.matchRoutes)(_routesConfig__WEBPACK_IMPORTED_MODULE_4__["default"], {
     pathname: req.url
   });
@@ -1045,8 +1156,11 @@ app.get('*', function (req, res) {
       }, function (error) {
         return error;
       });
-    }).filter(Boolean);
+    }).concat(_App__WEBPACK_IMPORTED_MODULE_2__["default"].loadData && _App__WEBPACK_IMPORTED_MODULE_2__["default"].loadData(store)).filter(Boolean); // 过滤掉 undefined 的 Promise
+
     Promise.all(loadDataPromises).then(function (data) {
+      var store222 = store.getState();
+      console.log('🚀 ~ app.get ~ store222 ______--:', store222);
       var html = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_1__.renderToString)(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom_server__WEBPACK_IMPORTED_MODULE_3__.StaticRouter, {
         location: req.url
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_App__WEBPACK_IMPORTED_MODULE_2__["default"], {

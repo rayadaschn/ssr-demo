@@ -1,6 +1,167 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/defineProperty.js":
+/*!************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/defineProperty.js ***!
+  \************************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _defineProperty)
+/* harmony export */ });
+/* harmony import */ var _toPropertyKey_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./toPropertyKey.js */ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/toPropertyKey.js");
+
+function _defineProperty(e, r, t) {
+  return (r = (0,_toPropertyKey_js__WEBPACK_IMPORTED_MODULE_0__["default"])(r)) in e ? Object.defineProperty(e, r, {
+    value: t,
+    enumerable: !0,
+    configurable: !0,
+    writable: !0
+  }) : e[r] = t, e;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!*****************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \*****************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _extends)
+/* harmony export */ });
+function _extends() {
+  return _extends = Object.assign ? Object.assign.bind() : function (n) {
+    for (var e = 1; e < arguments.length; e++) {
+      var t = arguments[e];
+      for (var r in t) ({}).hasOwnProperty.call(t, r) && (n[r] = t[r]);
+    }
+    return n;
+  }, _extends.apply(null, arguments);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/objectSpread2.js":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/objectSpread2.js ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _objectSpread2)
+/* harmony export */ });
+/* harmony import */ var _defineProperty_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./defineProperty.js */ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+
+function ownKeys(e, r) {
+  var t = Object.keys(e);
+  if (Object.getOwnPropertySymbols) {
+    var o = Object.getOwnPropertySymbols(e);
+    r && (o = o.filter(function (r) {
+      return Object.getOwnPropertyDescriptor(e, r).enumerable;
+    })), t.push.apply(t, o);
+  }
+  return t;
+}
+function _objectSpread2(e) {
+  for (var r = 1; r < arguments.length; r++) {
+    var t = null != arguments[r] ? arguments[r] : {};
+    r % 2 ? ownKeys(Object(t), !0).forEach(function (r) {
+      (0,_defineProperty_js__WEBPACK_IMPORTED_MODULE_0__["default"])(e, r, t[r]);
+    }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) {
+      Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r));
+    });
+  }
+  return e;
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/toPrimitive.js":
+/*!*********************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/toPrimitive.js ***!
+  \*********************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ toPrimitive)
+/* harmony export */ });
+/* harmony import */ var _typeof_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./typeof.js */ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/typeof.js");
+
+function toPrimitive(t, r) {
+  if ("object" != (0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(t) || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r || "default");
+    if ("object" != (0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(i)) return i;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r ? String : Number)(t);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/toPropertyKey.js":
+/*!***********************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/toPropertyKey.js ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ toPropertyKey)
+/* harmony export */ });
+/* harmony import */ var _typeof_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./typeof.js */ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/typeof.js");
+/* harmony import */ var _toPrimitive_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./toPrimitive.js */ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/toPrimitive.js");
+
+
+function toPropertyKey(t) {
+  var i = (0,_toPrimitive_js__WEBPACK_IMPORTED_MODULE_1__["default"])(t, "string");
+  return "symbol" == (0,_typeof_js__WEBPACK_IMPORTED_MODULE_0__["default"])(i) ? i : i + "";
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/typeof.js":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/typeof.js ***!
+  \****************************************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _typeof)
+/* harmony export */ });
+function _typeof(o) {
+  "@babel/helpers - typeof";
+
+  return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, _typeof(o);
+}
+
+
+/***/ }),
+
 /***/ "./node_modules/.pnpm/@remix-run+router@1.23.0/node_modules/@remix-run/router/dist/router.js":
 /*!***************************************************************************************************!*\
   !*** ./node_modules/.pnpm/@remix-run+router@1.23.0/node_modules/@remix-run/router/dist/router.js ***!
@@ -9866,6 +10027,821 @@ function isError(action) {
 function isValidKey(key) {
   return ['type', 'payload', 'error', 'meta'].indexOf(key) > -1;
 }
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/history@5.3.0/node_modules/history/index.js":
+/*!************************************************************************!*\
+  !*** ./node_modules/.pnpm/history@5.3.0/node_modules/history/index.js ***!
+  \************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   Action: () => (/* binding */ Action),
+/* harmony export */   createBrowserHistory: () => (/* binding */ createBrowserHistory),
+/* harmony export */   createHashHistory: () => (/* binding */ createHashHistory),
+/* harmony export */   createMemoryHistory: () => (/* binding */ createMemoryHistory),
+/* harmony export */   createPath: () => (/* binding */ createPath),
+/* harmony export */   parsePath: () => (/* binding */ parsePath)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/extends.js");
+
+
+/**
+ * Actions represent the type of change to a location value.
+ *
+ * @see https://github.com/remix-run/history/tree/main/docs/api-reference.md#action
+ */
+var Action;
+
+(function (Action) {
+  /**
+   * A POP indicates a change to an arbitrary index in the history stack, such
+   * as a back or forward navigation. It does not describe the direction of the
+   * navigation, only that the current index changed.
+   *
+   * Note: This is the default action for newly created history objects.
+   */
+  Action["Pop"] = "POP";
+  /**
+   * A PUSH indicates a new entry being added to the history stack, such as when
+   * a link is clicked and a new page loads. When this happens, all subsequent
+   * entries in the stack are lost.
+   */
+
+  Action["Push"] = "PUSH";
+  /**
+   * A REPLACE indicates the entry at the current index in the history stack
+   * being replaced by a new one.
+   */
+
+  Action["Replace"] = "REPLACE";
+})(Action || (Action = {}));
+
+var readOnly =  true ? function (obj) {
+  return Object.freeze(obj);
+} : 0;
+
+function warning(cond, message) {
+  if (!cond) {
+    // eslint-disable-next-line no-console
+    if (typeof console !== 'undefined') console.warn(message);
+
+    try {
+      // Welcome to debugging history!
+      //
+      // This error is thrown as a convenience so you can more easily
+      // find the source for a warning that appears in the console by
+      // enabling "pause on exceptions" in your JavaScript debugger.
+      throw new Error(message); // eslint-disable-next-line no-empty
+    } catch (e) {}
+  }
+}
+
+var BeforeUnloadEventType = 'beforeunload';
+var HashChangeEventType = 'hashchange';
+var PopStateEventType = 'popstate';
+/**
+ * Browser history stores the location in regular URLs. This is the standard for
+ * most web apps, but it requires some configuration on the server to ensure you
+ * serve the same app at multiple URLs.
+ *
+ * @see https://github.com/remix-run/history/tree/main/docs/api-reference.md#createbrowserhistory
+ */
+
+function createBrowserHistory(options) {
+  if (options === void 0) {
+    options = {};
+  }
+
+  var _options = options,
+      _options$window = _options.window,
+      window = _options$window === void 0 ? document.defaultView : _options$window;
+  var globalHistory = window.history;
+
+  function getIndexAndLocation() {
+    var _window$location = window.location,
+        pathname = _window$location.pathname,
+        search = _window$location.search,
+        hash = _window$location.hash;
+    var state = globalHistory.state || {};
+    return [state.idx, readOnly({
+      pathname: pathname,
+      search: search,
+      hash: hash,
+      state: state.usr || null,
+      key: state.key || 'default'
+    })];
+  }
+
+  var blockedPopTx = null;
+
+  function handlePop() {
+    if (blockedPopTx) {
+      blockers.call(blockedPopTx);
+      blockedPopTx = null;
+    } else {
+      var nextAction = Action.Pop;
+
+      var _getIndexAndLocation = getIndexAndLocation(),
+          nextIndex = _getIndexAndLocation[0],
+          nextLocation = _getIndexAndLocation[1];
+
+      if (blockers.length) {
+        if (nextIndex != null) {
+          var delta = index - nextIndex;
+
+          if (delta) {
+            // Revert the POP
+            blockedPopTx = {
+              action: nextAction,
+              location: nextLocation,
+              retry: function retry() {
+                go(delta * -1);
+              }
+            };
+            go(delta);
+          }
+        } else {
+          // Trying to POP to a location with no index. We did not create
+          // this location, so we can't effectively block the navigation.
+           true ? warning(false, // TODO: Write up a doc that explains our blocking strategy in
+          // detail and link to it here so people can understand better what
+          // is going on and how to avoid it.
+          "You are trying to block a POP navigation to a location that was not " + "created by the history library. The block will fail silently in " + "production, but in general you should do all navigation with the " + "history library (instead of using window.history.pushState directly) " + "to avoid this situation.") : 0;
+        }
+      } else {
+        applyTx(nextAction);
+      }
+    }
+  }
+
+  window.addEventListener(PopStateEventType, handlePop);
+  var action = Action.Pop;
+
+  var _getIndexAndLocation2 = getIndexAndLocation(),
+      index = _getIndexAndLocation2[0],
+      location = _getIndexAndLocation2[1];
+
+  var listeners = createEvents();
+  var blockers = createEvents();
+
+  if (index == null) {
+    index = 0;
+    globalHistory.replaceState((0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, globalHistory.state, {
+      idx: index
+    }), '');
+  }
+
+  function createHref(to) {
+    return typeof to === 'string' ? to : createPath(to);
+  } // state defaults to `null` because `window.history.state` does
+
+
+  function getNextLocation(to, state) {
+    if (state === void 0) {
+      state = null;
+    }
+
+    return readOnly((0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      pathname: location.pathname,
+      hash: '',
+      search: ''
+    }, typeof to === 'string' ? parsePath(to) : to, {
+      state: state,
+      key: createKey()
+    }));
+  }
+
+  function getHistoryStateAndUrl(nextLocation, index) {
+    return [{
+      usr: nextLocation.state,
+      key: nextLocation.key,
+      idx: index
+    }, createHref(nextLocation)];
+  }
+
+  function allowTx(action, location, retry) {
+    return !blockers.length || (blockers.call({
+      action: action,
+      location: location,
+      retry: retry
+    }), false);
+  }
+
+  function applyTx(nextAction) {
+    action = nextAction;
+
+    var _getIndexAndLocation3 = getIndexAndLocation();
+
+    index = _getIndexAndLocation3[0];
+    location = _getIndexAndLocation3[1];
+    listeners.call({
+      action: action,
+      location: location
+    });
+  }
+
+  function push(to, state) {
+    var nextAction = Action.Push;
+    var nextLocation = getNextLocation(to, state);
+
+    function retry() {
+      push(to, state);
+    }
+
+    if (allowTx(nextAction, nextLocation, retry)) {
+      var _getHistoryStateAndUr = getHistoryStateAndUrl(nextLocation, index + 1),
+          historyState = _getHistoryStateAndUr[0],
+          url = _getHistoryStateAndUr[1]; // TODO: Support forced reloading
+      // try...catch because iOS limits us to 100 pushState calls :/
+
+
+      try {
+        globalHistory.pushState(historyState, '', url);
+      } catch (error) {
+        // They are going to lose state here, but there is no real
+        // way to warn them about it since the page will refresh...
+        window.location.assign(url);
+      }
+
+      applyTx(nextAction);
+    }
+  }
+
+  function replace(to, state) {
+    var nextAction = Action.Replace;
+    var nextLocation = getNextLocation(to, state);
+
+    function retry() {
+      replace(to, state);
+    }
+
+    if (allowTx(nextAction, nextLocation, retry)) {
+      var _getHistoryStateAndUr2 = getHistoryStateAndUrl(nextLocation, index),
+          historyState = _getHistoryStateAndUr2[0],
+          url = _getHistoryStateAndUr2[1]; // TODO: Support forced reloading
+
+
+      globalHistory.replaceState(historyState, '', url);
+      applyTx(nextAction);
+    }
+  }
+
+  function go(delta) {
+    globalHistory.go(delta);
+  }
+
+  var history = {
+    get action() {
+      return action;
+    },
+
+    get location() {
+      return location;
+    },
+
+    createHref: createHref,
+    push: push,
+    replace: replace,
+    go: go,
+    back: function back() {
+      go(-1);
+    },
+    forward: function forward() {
+      go(1);
+    },
+    listen: function listen(listener) {
+      return listeners.push(listener);
+    },
+    block: function block(blocker) {
+      var unblock = blockers.push(blocker);
+
+      if (blockers.length === 1) {
+        window.addEventListener(BeforeUnloadEventType, promptBeforeUnload);
+      }
+
+      return function () {
+        unblock(); // Remove the beforeunload listener so the document may
+        // still be salvageable in the pagehide event.
+        // See https://html.spec.whatwg.org/#unloading-documents
+
+        if (!blockers.length) {
+          window.removeEventListener(BeforeUnloadEventType, promptBeforeUnload);
+        }
+      };
+    }
+  };
+  return history;
+}
+/**
+ * Hash history stores the location in window.location.hash. This makes it ideal
+ * for situations where you don't want to send the location to the server for
+ * some reason, either because you do cannot configure it or the URL space is
+ * reserved for something else.
+ *
+ * @see https://github.com/remix-run/history/tree/main/docs/api-reference.md#createhashhistory
+ */
+
+function createHashHistory(options) {
+  if (options === void 0) {
+    options = {};
+  }
+
+  var _options2 = options,
+      _options2$window = _options2.window,
+      window = _options2$window === void 0 ? document.defaultView : _options2$window;
+  var globalHistory = window.history;
+
+  function getIndexAndLocation() {
+    var _parsePath = parsePath(window.location.hash.substr(1)),
+        _parsePath$pathname = _parsePath.pathname,
+        pathname = _parsePath$pathname === void 0 ? '/' : _parsePath$pathname,
+        _parsePath$search = _parsePath.search,
+        search = _parsePath$search === void 0 ? '' : _parsePath$search,
+        _parsePath$hash = _parsePath.hash,
+        hash = _parsePath$hash === void 0 ? '' : _parsePath$hash;
+
+    var state = globalHistory.state || {};
+    return [state.idx, readOnly({
+      pathname: pathname,
+      search: search,
+      hash: hash,
+      state: state.usr || null,
+      key: state.key || 'default'
+    })];
+  }
+
+  var blockedPopTx = null;
+
+  function handlePop() {
+    if (blockedPopTx) {
+      blockers.call(blockedPopTx);
+      blockedPopTx = null;
+    } else {
+      var nextAction = Action.Pop;
+
+      var _getIndexAndLocation4 = getIndexAndLocation(),
+          nextIndex = _getIndexAndLocation4[0],
+          nextLocation = _getIndexAndLocation4[1];
+
+      if (blockers.length) {
+        if (nextIndex != null) {
+          var delta = index - nextIndex;
+
+          if (delta) {
+            // Revert the POP
+            blockedPopTx = {
+              action: nextAction,
+              location: nextLocation,
+              retry: function retry() {
+                go(delta * -1);
+              }
+            };
+            go(delta);
+          }
+        } else {
+          // Trying to POP to a location with no index. We did not create
+          // this location, so we can't effectively block the navigation.
+           true ? warning(false, // TODO: Write up a doc that explains our blocking strategy in
+          // detail and link to it here so people can understand better
+          // what is going on and how to avoid it.
+          "You are trying to block a POP navigation to a location that was not " + "created by the history library. The block will fail silently in " + "production, but in general you should do all navigation with the " + "history library (instead of using window.history.pushState directly) " + "to avoid this situation.") : 0;
+        }
+      } else {
+        applyTx(nextAction);
+      }
+    }
+  }
+
+  window.addEventListener(PopStateEventType, handlePop); // popstate does not fire on hashchange in IE 11 and old (trident) Edge
+  // https://developer.mozilla.org/de/docs/Web/API/Window/popstate_event
+
+  window.addEventListener(HashChangeEventType, function () {
+    var _getIndexAndLocation5 = getIndexAndLocation(),
+        nextLocation = _getIndexAndLocation5[1]; // Ignore extraneous hashchange events.
+
+
+    if (createPath(nextLocation) !== createPath(location)) {
+      handlePop();
+    }
+  });
+  var action = Action.Pop;
+
+  var _getIndexAndLocation6 = getIndexAndLocation(),
+      index = _getIndexAndLocation6[0],
+      location = _getIndexAndLocation6[1];
+
+  var listeners = createEvents();
+  var blockers = createEvents();
+
+  if (index == null) {
+    index = 0;
+    globalHistory.replaceState((0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, globalHistory.state, {
+      idx: index
+    }), '');
+  }
+
+  function getBaseHref() {
+    var base = document.querySelector('base');
+    var href = '';
+
+    if (base && base.getAttribute('href')) {
+      var url = window.location.href;
+      var hashIndex = url.indexOf('#');
+      href = hashIndex === -1 ? url : url.slice(0, hashIndex);
+    }
+
+    return href;
+  }
+
+  function createHref(to) {
+    return getBaseHref() + '#' + (typeof to === 'string' ? to : createPath(to));
+  }
+
+  function getNextLocation(to, state) {
+    if (state === void 0) {
+      state = null;
+    }
+
+    return readOnly((0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      pathname: location.pathname,
+      hash: '',
+      search: ''
+    }, typeof to === 'string' ? parsePath(to) : to, {
+      state: state,
+      key: createKey()
+    }));
+  }
+
+  function getHistoryStateAndUrl(nextLocation, index) {
+    return [{
+      usr: nextLocation.state,
+      key: nextLocation.key,
+      idx: index
+    }, createHref(nextLocation)];
+  }
+
+  function allowTx(action, location, retry) {
+    return !blockers.length || (blockers.call({
+      action: action,
+      location: location,
+      retry: retry
+    }), false);
+  }
+
+  function applyTx(nextAction) {
+    action = nextAction;
+
+    var _getIndexAndLocation7 = getIndexAndLocation();
+
+    index = _getIndexAndLocation7[0];
+    location = _getIndexAndLocation7[1];
+    listeners.call({
+      action: action,
+      location: location
+    });
+  }
+
+  function push(to, state) {
+    var nextAction = Action.Push;
+    var nextLocation = getNextLocation(to, state);
+
+    function retry() {
+      push(to, state);
+    }
+
+     true ? warning(nextLocation.pathname.charAt(0) === '/', "Relative pathnames are not supported in hash history.push(" + JSON.stringify(to) + ")") : 0;
+
+    if (allowTx(nextAction, nextLocation, retry)) {
+      var _getHistoryStateAndUr3 = getHistoryStateAndUrl(nextLocation, index + 1),
+          historyState = _getHistoryStateAndUr3[0],
+          url = _getHistoryStateAndUr3[1]; // TODO: Support forced reloading
+      // try...catch because iOS limits us to 100 pushState calls :/
+
+
+      try {
+        globalHistory.pushState(historyState, '', url);
+      } catch (error) {
+        // They are going to lose state here, but there is no real
+        // way to warn them about it since the page will refresh...
+        window.location.assign(url);
+      }
+
+      applyTx(nextAction);
+    }
+  }
+
+  function replace(to, state) {
+    var nextAction = Action.Replace;
+    var nextLocation = getNextLocation(to, state);
+
+    function retry() {
+      replace(to, state);
+    }
+
+     true ? warning(nextLocation.pathname.charAt(0) === '/', "Relative pathnames are not supported in hash history.replace(" + JSON.stringify(to) + ")") : 0;
+
+    if (allowTx(nextAction, nextLocation, retry)) {
+      var _getHistoryStateAndUr4 = getHistoryStateAndUrl(nextLocation, index),
+          historyState = _getHistoryStateAndUr4[0],
+          url = _getHistoryStateAndUr4[1]; // TODO: Support forced reloading
+
+
+      globalHistory.replaceState(historyState, '', url);
+      applyTx(nextAction);
+    }
+  }
+
+  function go(delta) {
+    globalHistory.go(delta);
+  }
+
+  var history = {
+    get action() {
+      return action;
+    },
+
+    get location() {
+      return location;
+    },
+
+    createHref: createHref,
+    push: push,
+    replace: replace,
+    go: go,
+    back: function back() {
+      go(-1);
+    },
+    forward: function forward() {
+      go(1);
+    },
+    listen: function listen(listener) {
+      return listeners.push(listener);
+    },
+    block: function block(blocker) {
+      var unblock = blockers.push(blocker);
+
+      if (blockers.length === 1) {
+        window.addEventListener(BeforeUnloadEventType, promptBeforeUnload);
+      }
+
+      return function () {
+        unblock(); // Remove the beforeunload listener so the document may
+        // still be salvageable in the pagehide event.
+        // See https://html.spec.whatwg.org/#unloading-documents
+
+        if (!blockers.length) {
+          window.removeEventListener(BeforeUnloadEventType, promptBeforeUnload);
+        }
+      };
+    }
+  };
+  return history;
+}
+/**
+ * Memory history stores the current location in memory. It is designed for use
+ * in stateful non-browser environments like tests and React Native.
+ *
+ * @see https://github.com/remix-run/history/tree/main/docs/api-reference.md#creatememoryhistory
+ */
+
+function createMemoryHistory(options) {
+  if (options === void 0) {
+    options = {};
+  }
+
+  var _options3 = options,
+      _options3$initialEntr = _options3.initialEntries,
+      initialEntries = _options3$initialEntr === void 0 ? ['/'] : _options3$initialEntr,
+      initialIndex = _options3.initialIndex;
+  var entries = initialEntries.map(function (entry) {
+    var location = readOnly((0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      pathname: '/',
+      search: '',
+      hash: '',
+      state: null,
+      key: createKey()
+    }, typeof entry === 'string' ? parsePath(entry) : entry));
+     true ? warning(location.pathname.charAt(0) === '/', "Relative pathnames are not supported in createMemoryHistory({ initialEntries }) (invalid entry: " + JSON.stringify(entry) + ")") : 0;
+    return location;
+  });
+  var index = clamp(initialIndex == null ? entries.length - 1 : initialIndex, 0, entries.length - 1);
+  var action = Action.Pop;
+  var location = entries[index];
+  var listeners = createEvents();
+  var blockers = createEvents();
+
+  function createHref(to) {
+    return typeof to === 'string' ? to : createPath(to);
+  }
+
+  function getNextLocation(to, state) {
+    if (state === void 0) {
+      state = null;
+    }
+
+    return readOnly((0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      pathname: location.pathname,
+      search: '',
+      hash: ''
+    }, typeof to === 'string' ? parsePath(to) : to, {
+      state: state,
+      key: createKey()
+    }));
+  }
+
+  function allowTx(action, location, retry) {
+    return !blockers.length || (blockers.call({
+      action: action,
+      location: location,
+      retry: retry
+    }), false);
+  }
+
+  function applyTx(nextAction, nextLocation) {
+    action = nextAction;
+    location = nextLocation;
+    listeners.call({
+      action: action,
+      location: location
+    });
+  }
+
+  function push(to, state) {
+    var nextAction = Action.Push;
+    var nextLocation = getNextLocation(to, state);
+
+    function retry() {
+      push(to, state);
+    }
+
+     true ? warning(location.pathname.charAt(0) === '/', "Relative pathnames are not supported in memory history.push(" + JSON.stringify(to) + ")") : 0;
+
+    if (allowTx(nextAction, nextLocation, retry)) {
+      index += 1;
+      entries.splice(index, entries.length, nextLocation);
+      applyTx(nextAction, nextLocation);
+    }
+  }
+
+  function replace(to, state) {
+    var nextAction = Action.Replace;
+    var nextLocation = getNextLocation(to, state);
+
+    function retry() {
+      replace(to, state);
+    }
+
+     true ? warning(location.pathname.charAt(0) === '/', "Relative pathnames are not supported in memory history.replace(" + JSON.stringify(to) + ")") : 0;
+
+    if (allowTx(nextAction, nextLocation, retry)) {
+      entries[index] = nextLocation;
+      applyTx(nextAction, nextLocation);
+    }
+  }
+
+  function go(delta) {
+    var nextIndex = clamp(index + delta, 0, entries.length - 1);
+    var nextAction = Action.Pop;
+    var nextLocation = entries[nextIndex];
+
+    function retry() {
+      go(delta);
+    }
+
+    if (allowTx(nextAction, nextLocation, retry)) {
+      index = nextIndex;
+      applyTx(nextAction, nextLocation);
+    }
+  }
+
+  var history = {
+    get index() {
+      return index;
+    },
+
+    get action() {
+      return action;
+    },
+
+    get location() {
+      return location;
+    },
+
+    createHref: createHref,
+    push: push,
+    replace: replace,
+    go: go,
+    back: function back() {
+      go(-1);
+    },
+    forward: function forward() {
+      go(1);
+    },
+    listen: function listen(listener) {
+      return listeners.push(listener);
+    },
+    block: function block(blocker) {
+      return blockers.push(blocker);
+    }
+  };
+  return history;
+} ////////////////////////////////////////////////////////////////////////////////
+// UTILS
+////////////////////////////////////////////////////////////////////////////////
+
+function clamp(n, lowerBound, upperBound) {
+  return Math.min(Math.max(n, lowerBound), upperBound);
+}
+
+function promptBeforeUnload(event) {
+  // Cancel the event.
+  event.preventDefault(); // Chrome (and legacy IE) requires returnValue to be set.
+
+  event.returnValue = '';
+}
+
+function createEvents() {
+  var handlers = [];
+  return {
+    get length() {
+      return handlers.length;
+    },
+
+    push: function push(fn) {
+      handlers.push(fn);
+      return function () {
+        handlers = handlers.filter(function (handler) {
+          return handler !== fn;
+        });
+      };
+    },
+    call: function call(arg) {
+      handlers.forEach(function (fn) {
+        return fn && fn(arg);
+      });
+    }
+  };
+}
+
+function createKey() {
+  return Math.random().toString(36).substr(2, 8);
+}
+/**
+ * Creates a string URL path from the given pathname, search, and hash components.
+ *
+ * @see https://github.com/remix-run/history/tree/main/docs/api-reference.md#createpath
+ */
+
+
+function createPath(_ref) {
+  var _ref$pathname = _ref.pathname,
+      pathname = _ref$pathname === void 0 ? '/' : _ref$pathname,
+      _ref$search = _ref.search,
+      search = _ref$search === void 0 ? '' : _ref$search,
+      _ref$hash = _ref.hash,
+      hash = _ref$hash === void 0 ? '' : _ref$hash;
+  if (search && search !== '?') pathname += search.charAt(0) === '?' ? search : '?' + search;
+  if (hash && hash !== '#') pathname += hash.charAt(0) === '#' ? hash : '#' + hash;
+  return pathname;
+}
+/**
+ * Parses a string URL path into its separate pathname, search, and hash components.
+ *
+ * @see https://github.com/remix-run/history/tree/main/docs/api-reference.md#parsepath
+ */
+
+function parsePath(path) {
+  var parsedPath = {};
+
+  if (path) {
+    var hashIndex = path.indexOf('#');
+
+    if (hashIndex >= 0) {
+      parsedPath.hash = path.substr(hashIndex);
+      path = path.substr(0, hashIndex);
+    }
+
+    var searchIndex = path.indexOf('?');
+
+    if (searchIndex >= 0) {
+      parsedPath.search = path.substr(searchIndex);
+      path = path.substr(0, searchIndex);
+    }
+
+    if (path) {
+      parsedPath.pathname = path;
+    }
+  }
+
+  return parsedPath;
+}
+
+
+
 
 /***/ }),
 
@@ -40145,9 +41121,9 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs":
+/***/ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@4.2.1/node_modules/react-redux/dist/react-redux.mjs":
 /*!*********************************************************************************************************************!*\
-  !*** ./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs ***!
+  !*** ./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@4.2.1/node_modules/react-redux/dist/react-redux.mjs ***!
   \*********************************************************************************************************************/
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
@@ -47120,6 +48096,447 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/actions.js":
+/*!**************************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/actions.js ***!
+  \**************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CALL_HISTORY_METHOD: () => (/* binding */ CALL_HISTORY_METHOD),
+/* harmony export */   LOCATION_CHANGE: () => (/* binding */ LOCATION_CHANGE),
+/* harmony export */   back: () => (/* binding */ back),
+/* harmony export */   forward: () => (/* binding */ forward),
+/* harmony export */   go: () => (/* binding */ go),
+/* harmony export */   goBack: () => (/* binding */ goBack),
+/* harmony export */   goForward: () => (/* binding */ goForward),
+/* harmony export */   locationChangeAction: () => (/* binding */ locationChangeAction),
+/* harmony export */   push: () => (/* binding */ push),
+/* harmony export */   replace: () => (/* binding */ replace)
+/* harmony export */ });
+const CALL_HISTORY_METHOD = '@@router/CALL_HISTORY_METHOD';
+const LOCATION_CHANGE = '@@router/LOCATION_CHANGE';
+const locationChangeAction = (location, action) => ({
+    type: LOCATION_CHANGE,
+    payload: { location, action },
+});
+function updateLocation(method) {
+    // @ts-ignore //support history 5.x back/forward
+    return (...args) => ({
+        type: CALL_HISTORY_METHOD,
+        payload: { method, args },
+    });
+}
+const push = updateLocation('push');
+const replace = updateLocation('replace');
+const go = updateLocation('go');
+const goBack = updateLocation('goBack');
+const goForward = updateLocation('goForward');
+// @ts-ignore //support history 5.x back/forward
+const back = updateLocation('back');
+// @ts-ignore //support history 5.x back/forward
+const forward = updateLocation('forward');
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/create.js":
+/*!*************************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/create.js ***!
+  \*************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createReduxHistoryContext: () => (/* binding */ createReduxHistoryContext)
+/* harmony export */ });
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actions */ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/actions.js");
+/* harmony import */ var _middleware__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./middleware */ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/middleware.js");
+/* harmony import */ var _reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./reducer */ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/reducer.js");
+
+
+
+const createReduxHistoryContext = ({ history, routerReducerKey = 'router', reduxTravelling = false, showHistoryAction = false, selectRouterState, savePreviousLocations = 0, batch, reachGlobalHistory, basename, }) => {
+    let listenObject = false;
+    // @ts-ignore
+    const callListener = (listener, location, action) => listenObject ? listener({ location, action }) : listener(location, action);
+    if (typeof batch !== 'function') {
+        batch = fn => {
+            fn();
+        };
+    }
+    /** ********************************************  REDUX REDUCER ***************************************************** */
+    if (typeof selectRouterState !== 'function') {
+        selectRouterState = state => state[routerReducerKey];
+    }
+    const routerReducer = (0,_reducer__WEBPACK_IMPORTED_MODULE_2__.createRouterReducer)({ savePreviousLocations, basename });
+    const routerMiddleware = (0,_middleware__WEBPACK_IMPORTED_MODULE_1__.createRouterMiddleware)({ history, showHistoryAction, basename });
+    /** ******************************************  REDUX TRAVELLING  ************************************************** */
+    let isReduxTravelling = false;
+    const handleReduxTravelling = (store) => {
+        const locationEqual = (loc1, loc2) => loc1.pathname === loc2.pathname && loc1.search === loc2.search && loc1.hash === loc2.hash;
+        return store.subscribe(() => {
+            // @ts-ignore
+            const sLoc = selectRouterState(store.getState()).location;
+            const hLoc = history.location;
+            if (sLoc && hLoc && !locationEqual(sLoc, hLoc)) {
+                isReduxTravelling = true;
+                history.push({ pathname: sLoc.pathname, search: sLoc.search, hash: sLoc.hash });
+            }
+        });
+    };
+    /** ******************************************  REDUX FIRST HISTORY   *********************************************** */
+    const createReduxHistory = (store) => {
+        let registeredCallback = [];
+        // init location store
+        store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_0__.locationChangeAction)(history.location, history.action));
+        if (reduxTravelling) {
+            handleReduxTravelling(store);
+        }
+        // listen to history API
+        // @ts-ignore
+        history.listen((location, action) => {
+            // support history v5
+            // @ts-ignore
+            if (location.location) {
+                // @ts-ignore
+                action = location.action;
+                // @ts-ignore
+                location = location.location;
+                listenObject = true;
+            }
+            if (isReduxTravelling) {
+                isReduxTravelling = false;
+                // notify registered callback travelling
+                // @ts-ignore
+                const routerState = selectRouterState(store.getState());
+                registeredCallback.forEach(c => callListener(c, routerState.location, routerState.action));
+                return;
+            }
+            // @ts-ignore
+            batch(() => {
+                store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_0__.locationChangeAction)(location, action));
+                // @ts-ignore
+                const routerState = selectRouterState(store.getState());
+                registeredCallback.forEach(c => callListener(c, routerState.location, routerState.action));
+            });
+        });
+        // listen to reach globalHistory (support "navigate")
+        if (reachGlobalHistory) {
+            reachGlobalHistory.listen(({ location, action }) => {
+                if (action !== `POP`) {
+                    const loc = {
+                        pathname: location.pathname,
+                        search: location.search,
+                        hash: location.hash,
+                        key: location.key,
+                        state: location.state,
+                    };
+                    // @ts-ignore
+                    batch(() => {
+                        // @ts-ignore
+                        store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_0__.locationChangeAction)(loc, action));
+                        // @ts-ignore
+                        const routerState = selectRouterState(store.getState());
+                        registeredCallback.forEach(c => callListener(c, routerState.location, routerState.action));
+                    });
+                }
+            });
+        }
+        // @ts-ignore
+        return {
+            block: history.block,
+            createHref: history.createHref,
+            push: (...args) => store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_0__.push)(...args)),
+            replace: (...args) => store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_0__.replace)(...args)),
+            go: (...args) => store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_0__.go)(...args)),
+            // @ts-ignore
+            goBack: (...args) => store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_0__.goBack)(...args)),
+            // @ts-ignore
+            goForward: (...args) => 
+            // @ts-ignore
+            store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_0__.goForward)(...args)),
+            // @ts-ignore
+            back: (...args) => store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_0__.back)(...args)),
+            // @ts-ignore
+            forward: (...args) => store.dispatch((0,_actions__WEBPACK_IMPORTED_MODULE_0__.forward)(...args)),
+            listen: callback => {
+                if (registeredCallback.indexOf(callback) < 0) {
+                    registeredCallback.push(callback);
+                }
+                return () => {
+                    registeredCallback = registeredCallback.filter(c => c !== callback);
+                };
+            },
+            // @ts-ignore
+            get location() {
+                // @ts-ignore
+                return selectRouterState(store.getState()).location;
+            },
+            // @ts-ignore
+            get action() {
+                // @ts-ignore
+                return selectRouterState(store.getState()).action;
+            },
+            get length() {
+                // @ts-ignore
+                return history.length;
+            },
+            // @ts-ignore
+            get listenObject() {
+                return listenObject;
+            },
+        };
+    };
+    return { routerReducer, routerMiddleware, createReduxHistory };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/index.js":
+/*!************************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/index.js ***!
+  \************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   CALL_HISTORY_METHOD: () => (/* reexport safe */ _actions__WEBPACK_IMPORTED_MODULE_0__.CALL_HISTORY_METHOD),
+/* harmony export */   LOCATION_CHANGE: () => (/* reexport safe */ _actions__WEBPACK_IMPORTED_MODULE_0__.LOCATION_CHANGE),
+/* harmony export */   createReduxHistoryContext: () => (/* reexport safe */ _create__WEBPACK_IMPORTED_MODULE_2__.createReduxHistoryContext),
+/* harmony export */   go: () => (/* reexport safe */ _actions__WEBPACK_IMPORTED_MODULE_0__.go),
+/* harmony export */   goBack: () => (/* reexport safe */ _actions__WEBPACK_IMPORTED_MODULE_0__.goBack),
+/* harmony export */   goForward: () => (/* reexport safe */ _actions__WEBPACK_IMPORTED_MODULE_0__.goForward),
+/* harmony export */   push: () => (/* reexport safe */ _actions__WEBPACK_IMPORTED_MODULE_0__.push),
+/* harmony export */   reachify: () => (/* reexport safe */ _reachify__WEBPACK_IMPORTED_MODULE_1__.reachify),
+/* harmony export */   replace: () => (/* reexport safe */ _actions__WEBPACK_IMPORTED_MODULE_0__.replace)
+/* harmony export */ });
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actions */ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/actions.js");
+/* harmony import */ var _reachify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./reachify */ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/reachify.js");
+/* harmony import */ var _create__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./create */ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/create.js");
+
+
+
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/middleware.js":
+/*!*****************************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/middleware.js ***!
+  \*****************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createRouterMiddleware: () => (/* binding */ createRouterMiddleware)
+/* harmony export */ });
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actions */ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/actions.js");
+
+function appendBasename(location, basename) {
+    if (typeof location === 'string' && !location.startsWith(basename)) {
+        return basename + location;
+    }
+    if (typeof location === 'object' &&
+        !!location.pathname &&
+        !location.pathname.startsWith(basename)) {
+        return Object.assign(Object.assign({}, location), { pathname: basename + location.pathname });
+    }
+    return location;
+}
+const createRouterMiddleware = ({ history, showHistoryAction, basename }) => () => 
+// @ts-ignore
+(next) => (action) => {
+    if (action.type !== _actions__WEBPACK_IMPORTED_MODULE_0__.CALL_HISTORY_METHOD) {
+        return next(action);
+    }
+    // @ts-ignore
+    const method = action.payload.method;
+    // @ts-ignore
+    const args = action.payload.args;
+    // eslint-disable-next-line default-case
+    switch (method) {
+        case 'push': {
+            let callArgs = args;
+            if (basename && args.length > 0) {
+                callArgs = [
+                    appendBasename(args[0], basename),
+                    ...args.slice(1),
+                ];
+            }
+            history.push(...callArgs);
+            break;
+        }
+        case 'replace': {
+            let callArgs = args;
+            if (basename && args.length > 0) {
+                callArgs = [
+                    appendBasename(args[0], basename),
+                    ...args.slice(1),
+                ];
+            }
+            history.replace(...callArgs);
+            break;
+        }
+        case 'go':
+            history.go(...args);
+            break;
+        case 'back':
+        case 'goBack':
+            // @ts-ignore
+            history.goBack && history.goBack(...args);
+            //@ts-ignore //support history 5.x
+            history.back && history.back(...args);
+            break;
+        case 'forward':
+        case 'goForward':
+            // @ts-ignore
+            history.goForward && history.goForward(...args);
+            //@ts-ignore //support history 5.x
+            history.forward && history.forward(...args);
+            break;
+    }
+    if (showHistoryAction)
+        return next(action);
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/reachify.js":
+/*!***************************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/reachify.js ***!
+  \***************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   reachify: () => (/* binding */ reachify)
+/* harmony export */ });
+const reachify = (reduxHistory) => {
+    let transitioning = false;
+    // eslint-disable-next-line @typescript-eslint/no-empty-function
+    let resolveTransition = () => { };
+    return {
+        // eslint-disable-next-line no-underscore-dangle
+        _onTransitionComplete() {
+            transitioning = false;
+            resolveTransition();
+        },
+        listen(listener) {
+            if (reduxHistory.listenObject) {
+                // @ts-ignore
+                return reduxHistory.listen(listener);
+            }
+            // @ts-ignore
+            return reduxHistory.listen((location, action) => listener({ location, action }));
+        },
+        // @ts-ignore
+        navigate(to, { state, replace = false } = {}) {
+            if (transitioning || replace) {
+                reduxHistory.replace(to, state);
+            }
+            else {
+                reduxHistory.push(to, state);
+            }
+            transitioning = true;
+            // eslint-disable-next-line no-return-assign
+            // @ts-ignore
+            return new Promise(res => (resolveTransition = res));
+        },
+        // @ts-ignore
+        get location() {
+            return reduxHistory.location;
+        },
+        get transitioning() {
+            return transitioning;
+        },
+    };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/reducer.js":
+/*!**************************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/reducer.js ***!
+  \**************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   createRouterReducer: () => (/* binding */ createRouterReducer)
+/* harmony export */ });
+/* harmony import */ var _actions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./actions */ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/actions.js");
+
+const createRouterReducer = ({ savePreviousLocations = 0, basename, }) => {
+    const initialState = {
+        location: null,
+        action: null,
+        basename,
+    };
+    // eslint-disable-next-line no-restricted-globals
+    const numLocationToTrack = isNaN(savePreviousLocations) ? 0 : savePreviousLocations;
+    if (numLocationToTrack)
+        initialState.previousLocations = [];
+    return (state = initialState, { type, payload } = {}) => {
+        if (type === _actions__WEBPACK_IMPORTED_MODULE_0__.LOCATION_CHANGE) {
+            const { location, action } = (payload || {});
+            const previousLocations = numLocationToTrack // @ts-ignore
+                ? [{ location, action }, ...state.previousLocations.slice(0, numLocationToTrack)]
+                : undefined;
+            return Object.assign(Object.assign({}, state), { location, action, previousLocations });
+        }
+        return state;
+    };
+};
+
+
+/***/ }),
+
+/***/ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/rr6/index.js":
+/*!******************************************************************************************************************************!*\
+  !*** ./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/rr6/index.js ***!
+  \******************************************************************************************************************************/
+/***/ (function(__unused_webpack_module, exports, __webpack_require__) {
+
+"use strict";
+
+var __importDefault = (this && this.__importDefault) || function (mod) {
+   return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.HistoryRouter = void 0;
+/* eslint-disable react/no-children-prop */
+var react_1 = __importDefault(__webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js"));
+var react_router_1 = __webpack_require__(/*! react-router */ "./node_modules/.pnpm/react-router@6.30.0_react@18.3.1/node_modules/react-router/dist/index.js");
+function HistoryRouter(_a) {
+   var basename = _a.basename, children = _a.children, history = _a.history;
+   var _b = react_1.default.useState({
+      action: history.action,
+      location: history.location,
+   }), state = _b[0], setState = _b[1];
+   react_1.default.useLayoutEffect(function () { return history.listen(setState); }, [history]);
+   return react_1.default.createElement(react_router_1.Router, {
+      basename: basename,
+      children: children,
+      location: state.location,
+      navigationType: state.action,
+      navigator: history,
+   });
+}
+exports.HistoryRouter = HistoryRouter;
+
+/***/ }),
+
 /***/ "./node_modules/.pnpm/redux-logger@3.0.6/node_modules/redux-logger/dist/redux-logger.js":
 /*!**********************************************************************************************!*\
   !*** ./node_modules/.pnpm/redux-logger@3.0.6/node_modules/redux-logger/dist/redux-logger.js ***!
@@ -47180,9 +48597,9 @@ function promiseMiddleware(_ref) {
 
 /***/ }),
 
-/***/ "./node_modules/.pnpm/redux-thunk@2.4.2_redux@5.0.1/node_modules/redux-thunk/es/index.js":
+/***/ "./node_modules/.pnpm/redux-thunk@2.4.2_redux@4.2.1/node_modules/redux-thunk/es/index.js":
 /*!***********************************************************************************************!*\
-  !*** ./node_modules/.pnpm/redux-thunk@2.4.2_redux@5.0.1/node_modules/redux-thunk/es/index.js ***!
+  !*** ./node_modules/.pnpm/redux-thunk@2.4.2_redux@4.2.1/node_modules/redux-thunk/es/index.js ***!
   \***********************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -47226,412 +48643,730 @@ thunk.withExtraArgument = createThunkMiddleware;
 
 /***/ }),
 
-/***/ "./node_modules/.pnpm/redux@5.0.1/node_modules/redux/dist/redux.mjs":
-/*!**************************************************************************!*\
-  !*** ./node_modules/.pnpm/redux@5.0.1/node_modules/redux/dist/redux.mjs ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+/***/ "./node_modules/.pnpm/redux@4.2.1/node_modules/redux/es/redux.js":
+/*!***********************************************************************!*\
+  !*** ./node_modules/.pnpm/redux@4.2.1/node_modules/redux/es/redux.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   __DO_NOT_USE__ActionTypes: () => (/* binding */ actionTypes_default),
+/* harmony export */   __DO_NOT_USE__ActionTypes: () => (/* binding */ ActionTypes),
 /* harmony export */   applyMiddleware: () => (/* binding */ applyMiddleware),
 /* harmony export */   bindActionCreators: () => (/* binding */ bindActionCreators),
 /* harmony export */   combineReducers: () => (/* binding */ combineReducers),
 /* harmony export */   compose: () => (/* binding */ compose),
 /* harmony export */   createStore: () => (/* binding */ createStore),
-/* harmony export */   isAction: () => (/* binding */ isAction),
-/* harmony export */   isPlainObject: () => (/* binding */ isPlainObject),
 /* harmony export */   legacy_createStore: () => (/* binding */ legacy_createStore)
 /* harmony export */ });
-// src/utils/formatProdErrorMessage.ts
+/* harmony import */ var _babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/.pnpm/@babel+runtime@7.27.0/node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
+
+
+/**
+ * Adapted from React: https://github.com/facebook/react/blob/master/packages/shared/formatProdErrorMessage.js
+ *
+ * Do not require this module directly! Use normal throw error calls. These messages will be replaced with error codes
+ * during build.
+ * @param {number} code
+ */
 function formatProdErrorMessage(code) {
-  return `Minified Redux error #${code}; visit https://redux.js.org/Errors?code=${code} for the full message or use the non-minified dev environment for full errors. `;
+  return "Minified Redux error #" + code + "; visit https://redux.js.org/Errors?code=" + code + " for the full message or " + 'use the non-minified dev environment for full errors. ';
 }
 
-// src/utils/symbol-observable.ts
-var $$observable = /* @__PURE__ */ (() => typeof Symbol === "function" && Symbol.observable || "@@observable")();
-var symbol_observable_default = $$observable;
+// Inlined version of the `symbol-observable` polyfill
+var $$observable = (function () {
+  return typeof Symbol === 'function' && Symbol.observable || '@@observable';
+})();
 
-// src/utils/actionTypes.ts
-var randomString = () => Math.random().toString(36).substring(7).split("").join(".");
-var ActionTypes = {
-  INIT: `@@redux/INIT${/* @__PURE__ */ randomString()}`,
-  REPLACE: `@@redux/REPLACE${/* @__PURE__ */ randomString()}`,
-  PROBE_UNKNOWN_ACTION: () => `@@redux/PROBE_UNKNOWN_ACTION${randomString()}`
+/**
+ * These are private action types reserved by Redux.
+ * For any unknown actions, you must return the current state.
+ * If the current state is undefined, you must return the initial state.
+ * Do not reference these action types directly in your code.
+ */
+var randomString = function randomString() {
+  return Math.random().toString(36).substring(7).split('').join('.');
 };
-var actionTypes_default = ActionTypes;
 
-// src/utils/isPlainObject.ts
+var ActionTypes = {
+  INIT: "@@redux/INIT" + randomString(),
+  REPLACE: "@@redux/REPLACE" + randomString(),
+  PROBE_UNKNOWN_ACTION: function PROBE_UNKNOWN_ACTION() {
+    return "@@redux/PROBE_UNKNOWN_ACTION" + randomString();
+  }
+};
+
+/**
+ * @param {any} obj The object to inspect.
+ * @returns {boolean} True if the argument appears to be a plain object.
+ */
 function isPlainObject(obj) {
-  if (typeof obj !== "object" || obj === null)
-    return false;
-  let proto = obj;
+  if (typeof obj !== 'object' || obj === null) return false;
+  var proto = obj;
+
   while (Object.getPrototypeOf(proto) !== null) {
     proto = Object.getPrototypeOf(proto);
   }
-  return Object.getPrototypeOf(obj) === proto || Object.getPrototypeOf(obj) === null;
+
+  return Object.getPrototypeOf(obj) === proto;
 }
 
-// src/utils/kindOf.ts
+// Inlined / shortened version of `kindOf` from https://github.com/jonschlinkert/kind-of
 function miniKindOf(val) {
-  if (val === void 0)
-    return "undefined";
-  if (val === null)
-    return "null";
-  const type = typeof val;
+  if (val === void 0) return 'undefined';
+  if (val === null) return 'null';
+  var type = typeof val;
+
   switch (type) {
-    case "boolean":
-    case "string":
-    case "number":
-    case "symbol":
-    case "function": {
-      return type;
-    }
+    case 'boolean':
+    case 'string':
+    case 'number':
+    case 'symbol':
+    case 'function':
+      {
+        return type;
+      }
   }
-  if (Array.isArray(val))
-    return "array";
-  if (isDate(val))
-    return "date";
-  if (isError(val))
-    return "error";
-  const constructorName = ctorName(val);
+
+  if (Array.isArray(val)) return 'array';
+  if (isDate(val)) return 'date';
+  if (isError(val)) return 'error';
+  var constructorName = ctorName(val);
+
   switch (constructorName) {
-    case "Symbol":
-    case "Promise":
-    case "WeakMap":
-    case "WeakSet":
-    case "Map":
-    case "Set":
+    case 'Symbol':
+    case 'Promise':
+    case 'WeakMap':
+    case 'WeakSet':
+    case 'Map':
+    case 'Set':
       return constructorName;
-  }
-  return Object.prototype.toString.call(val).slice(8, -1).toLowerCase().replace(/\s/g, "");
+  } // other
+
+
+  return type.slice(8, -1).toLowerCase().replace(/\s/g, '');
 }
+
 function ctorName(val) {
-  return typeof val.constructor === "function" ? val.constructor.name : null;
+  return typeof val.constructor === 'function' ? val.constructor.name : null;
 }
+
 function isError(val) {
-  return val instanceof Error || typeof val.message === "string" && val.constructor && typeof val.constructor.stackTraceLimit === "number";
+  return val instanceof Error || typeof val.message === 'string' && val.constructor && typeof val.constructor.stackTraceLimit === 'number';
 }
+
 function isDate(val) {
-  if (val instanceof Date)
-    return true;
-  return typeof val.toDateString === "function" && typeof val.getDate === "function" && typeof val.setDate === "function";
+  if (val instanceof Date) return true;
+  return typeof val.toDateString === 'function' && typeof val.getDate === 'function' && typeof val.setDate === 'function';
 }
+
 function kindOf(val) {
-  let typeOfVal = typeof val;
+  var typeOfVal = typeof val;
+
   if (true) {
     typeOfVal = miniKindOf(val);
   }
+
   return typeOfVal;
 }
 
-// src/createStore.ts
+/**
+ * @deprecated
+ *
+ * **We recommend using the `configureStore` method
+ * of the `@reduxjs/toolkit` package**, which replaces `createStore`.
+ *
+ * Redux Toolkit is our recommended approach for writing Redux logic today,
+ * including store setup, reducers, data fetching, and more.
+ *
+ * **For more details, please read this Redux docs page:**
+ * **https://redux.js.org/introduction/why-rtk-is-redux-today**
+ *
+ * `configureStore` from Redux Toolkit is an improved version of `createStore` that
+ * simplifies setup and helps avoid common bugs.
+ *
+ * You should not be using the `redux` core package by itself today, except for learning purposes.
+ * The `createStore` method from the core `redux` package will not be removed, but we encourage
+ * all users to migrate to using Redux Toolkit for all Redux code.
+ *
+ * If you want to use `createStore` without this visual deprecation warning, use
+ * the `legacy_createStore` import instead:
+ *
+ * `import { legacy_createStore as createStore} from 'redux'`
+ *
+ */
+
 function createStore(reducer, preloadedState, enhancer) {
-  if (typeof reducer !== "function") {
-    throw new Error( false ? 0 : `Expected the root reducer to be a function. Instead, received: '${kindOf(reducer)}'`);
+  var _ref2;
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'function' || typeof enhancer === 'function' && typeof arguments[3] === 'function') {
+    throw new Error( false ? 0 : 'It looks like you are passing several store enhancers to ' + 'createStore(). This is not supported. Instead, compose them ' + 'together to a single function. See https://redux.js.org/tutorials/fundamentals/part-4-store#creating-a-store-with-enhancers for an example.');
   }
-  if (typeof preloadedState === "function" && typeof enhancer === "function" || typeof enhancer === "function" && typeof arguments[3] === "function") {
-    throw new Error( false ? 0 : "It looks like you are passing several store enhancers to createStore(). This is not supported. Instead, compose them together to a single function. See https://redux.js.org/tutorials/fundamentals/part-4-store#creating-a-store-with-enhancers for an example.");
-  }
-  if (typeof preloadedState === "function" && typeof enhancer === "undefined") {
+
+  if (typeof preloadedState === 'function' && typeof enhancer === 'undefined') {
     enhancer = preloadedState;
-    preloadedState = void 0;
+    preloadedState = undefined;
   }
-  if (typeof enhancer !== "undefined") {
-    if (typeof enhancer !== "function") {
-      throw new Error( false ? 0 : `Expected the enhancer to be a function. Instead, received: '${kindOf(enhancer)}'`);
+
+  if (typeof enhancer !== 'undefined') {
+    if (typeof enhancer !== 'function') {
+      throw new Error( false ? 0 : "Expected the enhancer to be a function. Instead, received: '" + kindOf(enhancer) + "'");
     }
+
     return enhancer(createStore)(reducer, preloadedState);
   }
-  let currentReducer = reducer;
-  let currentState = preloadedState;
-  let currentListeners = /* @__PURE__ */ new Map();
-  let nextListeners = currentListeners;
-  let listenerIdCounter = 0;
-  let isDispatching = false;
+
+  if (typeof reducer !== 'function') {
+    throw new Error( false ? 0 : "Expected the root reducer to be a function. Instead, received: '" + kindOf(reducer) + "'");
+  }
+
+  var currentReducer = reducer;
+  var currentState = preloadedState;
+  var currentListeners = [];
+  var nextListeners = currentListeners;
+  var isDispatching = false;
+  /**
+   * This makes a shallow copy of currentListeners so we can use
+   * nextListeners as a temporary list while dispatching.
+   *
+   * This prevents any bugs around consumers calling
+   * subscribe/unsubscribe in the middle of a dispatch.
+   */
+
   function ensureCanMutateNextListeners() {
     if (nextListeners === currentListeners) {
-      nextListeners = /* @__PURE__ */ new Map();
-      currentListeners.forEach((listener, key) => {
-        nextListeners.set(key, listener);
-      });
+      nextListeners = currentListeners.slice();
     }
   }
+  /**
+   * Reads the state tree managed by the store.
+   *
+   * @returns {any} The current state tree of your application.
+   */
+
+
   function getState() {
     if (isDispatching) {
-      throw new Error( false ? 0 : "You may not call store.getState() while the reducer is executing. The reducer has already received the state as an argument. Pass it down from the top reducer instead of reading it from the store.");
+      throw new Error( false ? 0 : 'You may not call store.getState() while the reducer is executing. ' + 'The reducer has already received the state as an argument. ' + 'Pass it down from the top reducer instead of reading it from the store.');
     }
+
     return currentState;
   }
+  /**
+   * Adds a change listener. It will be called any time an action is dispatched,
+   * and some part of the state tree may potentially have changed. You may then
+   * call `getState()` to read the current state tree inside the callback.
+   *
+   * You may call `dispatch()` from a change listener, with the following
+   * caveats:
+   *
+   * 1. The subscriptions are snapshotted just before every `dispatch()` call.
+   * If you subscribe or unsubscribe while the listeners are being invoked, this
+   * will not have any effect on the `dispatch()` that is currently in progress.
+   * However, the next `dispatch()` call, whether nested or not, will use a more
+   * recent snapshot of the subscription list.
+   *
+   * 2. The listener should not expect to see all state changes, as the state
+   * might have been updated multiple times during a nested `dispatch()` before
+   * the listener is called. It is, however, guaranteed that all subscribers
+   * registered before the `dispatch()` started will be called with the latest
+   * state by the time it exits.
+   *
+   * @param {Function} listener A callback to be invoked on every dispatch.
+   * @returns {Function} A function to remove this change listener.
+   */
+
+
   function subscribe(listener) {
-    if (typeof listener !== "function") {
-      throw new Error( false ? 0 : `Expected the listener to be a function. Instead, received: '${kindOf(listener)}'`);
+    if (typeof listener !== 'function') {
+      throw new Error( false ? 0 : "Expected the listener to be a function. Instead, received: '" + kindOf(listener) + "'");
     }
+
     if (isDispatching) {
-      throw new Error( false ? 0 : "You may not call store.subscribe() while the reducer is executing. If you would like to be notified after the store has been updated, subscribe from a component and invoke store.getState() in the callback to access the latest state. See https://redux.js.org/api/store#subscribelistener for more details.");
+      throw new Error( false ? 0 : 'You may not call store.subscribe() while the reducer is executing. ' + 'If you would like to be notified after the store has been updated, subscribe from a ' + 'component and invoke store.getState() in the callback to access the latest state. ' + 'See https://redux.js.org/api/store#subscribelistener for more details.');
     }
-    let isSubscribed = true;
+
+    var isSubscribed = true;
     ensureCanMutateNextListeners();
-    const listenerId = listenerIdCounter++;
-    nextListeners.set(listenerId, listener);
+    nextListeners.push(listener);
     return function unsubscribe() {
       if (!isSubscribed) {
         return;
       }
+
       if (isDispatching) {
-        throw new Error( false ? 0 : "You may not unsubscribe from a store listener while the reducer is executing. See https://redux.js.org/api/store#subscribelistener for more details.");
+        throw new Error( false ? 0 : 'You may not unsubscribe from a store listener while the reducer is executing. ' + 'See https://redux.js.org/api/store#subscribelistener for more details.');
       }
+
       isSubscribed = false;
       ensureCanMutateNextListeners();
-      nextListeners.delete(listenerId);
+      var index = nextListeners.indexOf(listener);
+      nextListeners.splice(index, 1);
       currentListeners = null;
     };
   }
+  /**
+   * Dispatches an action. It is the only way to trigger a state change.
+   *
+   * The `reducer` function, used to create the store, will be called with the
+   * current state tree and the given `action`. Its return value will
+   * be considered the **next** state of the tree, and the change listeners
+   * will be notified.
+   *
+   * The base implementation only supports plain object actions. If you want to
+   * dispatch a Promise, an Observable, a thunk, or something else, you need to
+   * wrap your store creating function into the corresponding middleware. For
+   * example, see the documentation for the `redux-thunk` package. Even the
+   * middleware will eventually dispatch plain object actions using this method.
+   *
+   * @param {Object} action A plain object representing “what changed”. It is
+   * a good idea to keep actions serializable so you can record and replay user
+   * sessions, or use the time travelling `redux-devtools`. An action must have
+   * a `type` property which may not be `undefined`. It is a good idea to use
+   * string constants for action types.
+   *
+   * @returns {Object} For convenience, the same action object you dispatched.
+   *
+   * Note that, if you use a custom middleware, it may wrap `dispatch()` to
+   * return something else (for example, a Promise you can await).
+   */
+
+
   function dispatch(action) {
     if (!isPlainObject(action)) {
-      throw new Error( false ? 0 : `Actions must be plain objects. Instead, the actual type was: '${kindOf(action)}'. You may need to add middleware to your store setup to handle dispatching other values, such as 'redux-thunk' to handle dispatching functions. See https://redux.js.org/tutorials/fundamentals/part-4-store#middleware and https://redux.js.org/tutorials/fundamentals/part-6-async-logic#using-the-redux-thunk-middleware for examples.`);
+      throw new Error( false ? 0 : "Actions must be plain objects. Instead, the actual type was: '" + kindOf(action) + "'. You may need to add middleware to your store setup to handle dispatching other values, such as 'redux-thunk' to handle dispatching functions. See https://redux.js.org/tutorials/fundamentals/part-4-store#middleware and https://redux.js.org/tutorials/fundamentals/part-6-async-logic#using-the-redux-thunk-middleware for examples.");
     }
-    if (typeof action.type === "undefined") {
+
+    if (typeof action.type === 'undefined') {
       throw new Error( false ? 0 : 'Actions may not have an undefined "type" property. You may have misspelled an action type string constant.');
     }
-    if (typeof action.type !== "string") {
-      throw new Error( false ? 0 : `Action "type" property must be a string. Instead, the actual type was: '${kindOf(action.type)}'. Value was: '${action.type}' (stringified)`);
-    }
+
     if (isDispatching) {
-      throw new Error( false ? 0 : "Reducers may not dispatch actions.");
+      throw new Error( false ? 0 : 'Reducers may not dispatch actions.');
     }
+
     try {
       isDispatching = true;
       currentState = currentReducer(currentState, action);
     } finally {
       isDispatching = false;
     }
-    const listeners = currentListeners = nextListeners;
-    listeners.forEach((listener) => {
+
+    var listeners = currentListeners = nextListeners;
+
+    for (var i = 0; i < listeners.length; i++) {
+      var listener = listeners[i];
       listener();
-    });
+    }
+
     return action;
   }
+  /**
+   * Replaces the reducer currently used by the store to calculate the state.
+   *
+   * You might need this if your app implements code splitting and you want to
+   * load some of the reducers dynamically. You might also need this if you
+   * implement a hot reloading mechanism for Redux.
+   *
+   * @param {Function} nextReducer The reducer for the store to use instead.
+   * @returns {void}
+   */
+
+
   function replaceReducer(nextReducer) {
-    if (typeof nextReducer !== "function") {
-      throw new Error( false ? 0 : `Expected the nextReducer to be a function. Instead, received: '${kindOf(nextReducer)}`);
+    if (typeof nextReducer !== 'function') {
+      throw new Error( false ? 0 : "Expected the nextReducer to be a function. Instead, received: '" + kindOf(nextReducer));
     }
-    currentReducer = nextReducer;
+
+    currentReducer = nextReducer; // This action has a similiar effect to ActionTypes.INIT.
+    // Any reducers that existed in both the new and old rootReducer
+    // will receive the previous state. This effectively populates
+    // the new state tree with any relevant data from the old one.
+
     dispatch({
-      type: actionTypes_default.REPLACE
+      type: ActionTypes.REPLACE
     });
   }
+  /**
+   * Interoperability point for observable/reactive libraries.
+   * @returns {observable} A minimal observable of state changes.
+   * For more information, see the observable proposal:
+   * https://github.com/tc39/proposal-observable
+   */
+
+
   function observable() {
-    const outerSubscribe = subscribe;
-    return {
+    var _ref;
+
+    var outerSubscribe = subscribe;
+    return _ref = {
       /**
        * The minimal observable subscription method.
-       * @param observer Any object that can be used as an observer.
+       * @param {Object} observer Any object that can be used as an observer.
        * The observer object should have a `next` method.
-       * @returns An object with an `unsubscribe` method that can
+       * @returns {subscription} An object with an `unsubscribe` method that can
        * be used to unsubscribe the observable from the store, and prevent further
        * emission of values from the observable.
        */
-      subscribe(observer) {
-        if (typeof observer !== "object" || observer === null) {
-          throw new Error( false ? 0 : `Expected the observer to be an object. Instead, received: '${kindOf(observer)}'`);
+      subscribe: function subscribe(observer) {
+        if (typeof observer !== 'object' || observer === null) {
+          throw new Error( false ? 0 : "Expected the observer to be an object. Instead, received: '" + kindOf(observer) + "'");
         }
+
         function observeState() {
-          const observerAsObserver = observer;
-          if (observerAsObserver.next) {
-            observerAsObserver.next(getState());
+          if (observer.next) {
+            observer.next(getState());
           }
         }
-        observeState();
-        const unsubscribe = outerSubscribe(observeState);
-        return {
-          unsubscribe
-        };
-      },
-      [symbol_observable_default]() {
-        return this;
-      }
-    };
-  }
-  dispatch({
-    type: actionTypes_default.INIT
-  });
-  const store = {
-    dispatch,
-    subscribe,
-    getState,
-    replaceReducer,
-    [symbol_observable_default]: observable
-  };
-  return store;
-}
-function legacy_createStore(reducer, preloadedState, enhancer) {
-  return createStore(reducer, preloadedState, enhancer);
-}
 
-// src/utils/warning.ts
+        observeState();
+        var unsubscribe = outerSubscribe(observeState);
+        return {
+          unsubscribe: unsubscribe
+        };
+      }
+    }, _ref[$$observable] = function () {
+      return this;
+    }, _ref;
+  } // When a store is created, an "INIT" action is dispatched so that every
+  // reducer returns their initial state. This effectively populates
+  // the initial state tree.
+
+
+  dispatch({
+    type: ActionTypes.INIT
+  });
+  return _ref2 = {
+    dispatch: dispatch,
+    subscribe: subscribe,
+    getState: getState,
+    replaceReducer: replaceReducer
+  }, _ref2[$$observable] = observable, _ref2;
+}
+/**
+ * Creates a Redux store that holds the state tree.
+ *
+ * **We recommend using `configureStore` from the
+ * `@reduxjs/toolkit` package**, which replaces `createStore`:
+ * **https://redux.js.org/introduction/why-rtk-is-redux-today**
+ *
+ * The only way to change the data in the store is to call `dispatch()` on it.
+ *
+ * There should only be a single store in your app. To specify how different
+ * parts of the state tree respond to actions, you may combine several reducers
+ * into a single reducer function by using `combineReducers`.
+ *
+ * @param {Function} reducer A function that returns the next state tree, given
+ * the current state tree and the action to handle.
+ *
+ * @param {any} [preloadedState] The initial state. You may optionally specify it
+ * to hydrate the state from the server in universal apps, or to restore a
+ * previously serialized user session.
+ * If you use `combineReducers` to produce the root reducer function, this must be
+ * an object with the same shape as `combineReducers` keys.
+ *
+ * @param {Function} [enhancer] The store enhancer. You may optionally specify it
+ * to enhance the store with third-party capabilities such as middleware,
+ * time travel, persistence, etc. The only store enhancer that ships with Redux
+ * is `applyMiddleware()`.
+ *
+ * @returns {Store} A Redux store that lets you read the state, dispatch actions
+ * and subscribe to changes.
+ */
+
+var legacy_createStore = createStore;
+
+/**
+ * Prints a warning in the console if it exists.
+ *
+ * @param {String} message The warning message.
+ * @returns {void}
+ */
 function warning(message) {
-  if (typeof console !== "undefined" && typeof console.error === "function") {
+  /* eslint-disable no-console */
+  if (typeof console !== 'undefined' && typeof console.error === 'function') {
     console.error(message);
   }
+  /* eslint-enable no-console */
+
+
   try {
+    // This error was thrown as a convenience so that if you enable
+    // "break on all exceptions" in your console,
+    // it would pause the execution at this line.
     throw new Error(message);
-  } catch (e) {
+  } catch (e) {} // eslint-disable-line no-empty
+
+}
+
+function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
+  var reducerKeys = Object.keys(reducers);
+  var argumentName = action && action.type === ActionTypes.INIT ? 'preloadedState argument passed to createStore' : 'previous state received by the reducer';
+
+  if (reducerKeys.length === 0) {
+    return 'Store does not have a valid reducer. Make sure the argument passed ' + 'to combineReducers is an object whose values are reducers.';
+  }
+
+  if (!isPlainObject(inputState)) {
+    return "The " + argumentName + " has unexpected type of \"" + kindOf(inputState) + "\". Expected argument to be an object with the following " + ("keys: \"" + reducerKeys.join('", "') + "\"");
+  }
+
+  var unexpectedKeys = Object.keys(inputState).filter(function (key) {
+    return !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key];
+  });
+  unexpectedKeys.forEach(function (key) {
+    unexpectedKeyCache[key] = true;
+  });
+  if (action && action.type === ActionTypes.REPLACE) return;
+
+  if (unexpectedKeys.length > 0) {
+    return "Unexpected " + (unexpectedKeys.length > 1 ? 'keys' : 'key') + " " + ("\"" + unexpectedKeys.join('", "') + "\" found in " + argumentName + ". ") + "Expected to find one of the known reducer keys instead: " + ("\"" + reducerKeys.join('", "') + "\". Unexpected keys will be ignored.");
   }
 }
 
-// src/combineReducers.ts
-function getUnexpectedStateShapeWarningMessage(inputState, reducers, action, unexpectedKeyCache) {
-  const reducerKeys = Object.keys(reducers);
-  const argumentName = action && action.type === actionTypes_default.INIT ? "preloadedState argument passed to createStore" : "previous state received by the reducer";
-  if (reducerKeys.length === 0) {
-    return "Store does not have a valid reducer. Make sure the argument passed to combineReducers is an object whose values are reducers.";
-  }
-  if (!isPlainObject(inputState)) {
-    return `The ${argumentName} has unexpected type of "${kindOf(inputState)}". Expected argument to be an object with the following keys: "${reducerKeys.join('", "')}"`;
-  }
-  const unexpectedKeys = Object.keys(inputState).filter((key) => !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key]);
-  unexpectedKeys.forEach((key) => {
-    unexpectedKeyCache[key] = true;
-  });
-  if (action && action.type === actionTypes_default.REPLACE)
-    return;
-  if (unexpectedKeys.length > 0) {
-    return `Unexpected ${unexpectedKeys.length > 1 ? "keys" : "key"} "${unexpectedKeys.join('", "')}" found in ${argumentName}. Expected to find one of the known reducer keys instead: "${reducerKeys.join('", "')}". Unexpected keys will be ignored.`;
-  }
-}
 function assertReducerShape(reducers) {
-  Object.keys(reducers).forEach((key) => {
-    const reducer = reducers[key];
-    const initialState = reducer(void 0, {
-      type: actionTypes_default.INIT
+  Object.keys(reducers).forEach(function (key) {
+    var reducer = reducers[key];
+    var initialState = reducer(undefined, {
+      type: ActionTypes.INIT
     });
-    if (typeof initialState === "undefined") {
-      throw new Error( false ? 0 : `The slice reducer for key "${key}" returned undefined during initialization. If the state passed to the reducer is undefined, you must explicitly return the initial state. The initial state may not be undefined. If you don't want to set a value for this reducer, you can use null instead of undefined.`);
+
+    if (typeof initialState === 'undefined') {
+      throw new Error( false ? 0 : "The slice reducer for key \"" + key + "\" returned undefined during initialization. " + "If the state passed to the reducer is undefined, you must " + "explicitly return the initial state. The initial state may " + "not be undefined. If you don't want to set a value for this reducer, " + "you can use null instead of undefined.");
     }
-    if (typeof reducer(void 0, {
-      type: actionTypes_default.PROBE_UNKNOWN_ACTION()
-    }) === "undefined") {
-      throw new Error( false ? 0 : `The slice reducer for key "${key}" returned undefined when probed with a random type. Don't try to handle '${actionTypes_default.INIT}' or other actions in "redux/*" namespace. They are considered private. Instead, you must return the current state for any unknown actions, unless it is undefined, in which case you must return the initial state, regardless of the action type. The initial state may not be undefined, but can be null.`);
+
+    if (typeof reducer(undefined, {
+      type: ActionTypes.PROBE_UNKNOWN_ACTION()
+    }) === 'undefined') {
+      throw new Error( false ? 0 : "The slice reducer for key \"" + key + "\" returned undefined when probed with a random type. " + ("Don't try to handle '" + ActionTypes.INIT + "' or other actions in \"redux/*\" ") + "namespace. They are considered private. Instead, you must return the " + "current state for any unknown actions, unless it is undefined, " + "in which case you must return the initial state, regardless of the " + "action type. The initial state may not be undefined, but can be null.");
     }
   });
 }
+/**
+ * Turns an object whose values are different reducer functions, into a single
+ * reducer function. It will call every child reducer, and gather their results
+ * into a single state object, whose keys correspond to the keys of the passed
+ * reducer functions.
+ *
+ * @param {Object} reducers An object whose values correspond to different
+ * reducer functions that need to be combined into one. One handy way to obtain
+ * it is to use ES6 `import * as reducers` syntax. The reducers may never return
+ * undefined for any action. Instead, they should return their initial state
+ * if the state passed to them was undefined, and the current state for any
+ * unrecognized action.
+ *
+ * @returns {Function} A reducer function that invokes every reducer inside the
+ * passed object, and builds a state object with the same shape.
+ */
+
+
 function combineReducers(reducers) {
-  const reducerKeys = Object.keys(reducers);
-  const finalReducers = {};
-  for (let i = 0; i < reducerKeys.length; i++) {
-    const key = reducerKeys[i];
+  var reducerKeys = Object.keys(reducers);
+  var finalReducers = {};
+
+  for (var i = 0; i < reducerKeys.length; i++) {
+    var key = reducerKeys[i];
+
     if (true) {
-      if (typeof reducers[key] === "undefined") {
-        warning(`No reducer provided for key "${key}"`);
+      if (typeof reducers[key] === 'undefined') {
+        warning("No reducer provided for key \"" + key + "\"");
       }
     }
-    if (typeof reducers[key] === "function") {
+
+    if (typeof reducers[key] === 'function') {
       finalReducers[key] = reducers[key];
     }
   }
-  const finalReducerKeys = Object.keys(finalReducers);
-  let unexpectedKeyCache;
+
+  var finalReducerKeys = Object.keys(finalReducers); // This is used to make sure we don't warn about the same
+  // keys multiple times.
+
+  var unexpectedKeyCache;
+
   if (true) {
     unexpectedKeyCache = {};
   }
-  let shapeAssertionError;
+
+  var shapeAssertionError;
+
   try {
     assertReducerShape(finalReducers);
   } catch (e) {
     shapeAssertionError = e;
   }
-  return function combination(state = {}, action) {
+
+  return function combination(state, action) {
+    if (state === void 0) {
+      state = {};
+    }
+
     if (shapeAssertionError) {
       throw shapeAssertionError;
     }
+
     if (true) {
-      const warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
+      var warningMessage = getUnexpectedStateShapeWarningMessage(state, finalReducers, action, unexpectedKeyCache);
+
       if (warningMessage) {
         warning(warningMessage);
       }
     }
-    let hasChanged = false;
-    const nextState = {};
-    for (let i = 0; i < finalReducerKeys.length; i++) {
-      const key = finalReducerKeys[i];
-      const reducer = finalReducers[key];
-      const previousStateForKey = state[key];
-      const nextStateForKey = reducer(previousStateForKey, action);
-      if (typeof nextStateForKey === "undefined") {
-        const actionType = action && action.type;
-        throw new Error( false ? 0 : `When called with an action of type ${actionType ? `"${String(actionType)}"` : "(unknown type)"}, the slice reducer for key "${key}" returned undefined. To ignore an action, you must explicitly return the previous state. If you want this reducer to hold no value, you can return null instead of undefined.`);
+
+    var hasChanged = false;
+    var nextState = {};
+
+    for (var _i = 0; _i < finalReducerKeys.length; _i++) {
+      var _key = finalReducerKeys[_i];
+      var reducer = finalReducers[_key];
+      var previousStateForKey = state[_key];
+      var nextStateForKey = reducer(previousStateForKey, action);
+
+      if (typeof nextStateForKey === 'undefined') {
+        var actionType = action && action.type;
+        throw new Error( false ? 0 : "When called with an action of type " + (actionType ? "\"" + String(actionType) + "\"" : '(unknown type)') + ", the slice reducer for key \"" + _key + "\" returned undefined. " + "To ignore an action, you must explicitly return the previous state. " + "If you want this reducer to hold no value, you can return null instead of undefined.");
       }
-      nextState[key] = nextStateForKey;
+
+      nextState[_key] = nextStateForKey;
       hasChanged = hasChanged || nextStateForKey !== previousStateForKey;
     }
+
     hasChanged = hasChanged || finalReducerKeys.length !== Object.keys(state).length;
     return hasChanged ? nextState : state;
   };
 }
 
-// src/bindActionCreators.ts
 function bindActionCreator(actionCreator, dispatch) {
-  return function(...args) {
-    return dispatch(actionCreator.apply(this, args));
+  return function () {
+    return dispatch(actionCreator.apply(this, arguments));
   };
 }
+/**
+ * Turns an object whose values are action creators, into an object with the
+ * same keys, but with every function wrapped into a `dispatch` call so they
+ * may be invoked directly. This is just a convenience method, as you can call
+ * `store.dispatch(MyActionCreators.doSomething())` yourself just fine.
+ *
+ * For convenience, you can also pass an action creator as the first argument,
+ * and get a dispatch wrapped function in return.
+ *
+ * @param {Function|Object} actionCreators An object whose values are action
+ * creator functions. One handy way to obtain it is to use ES6 `import * as`
+ * syntax. You may also pass a single function.
+ *
+ * @param {Function} dispatch The `dispatch` function available on your Redux
+ * store.
+ *
+ * @returns {Function|Object} The object mimicking the original object, but with
+ * every action creator wrapped into the `dispatch` call. If you passed a
+ * function as `actionCreators`, the return value will also be a single
+ * function.
+ */
+
+
 function bindActionCreators(actionCreators, dispatch) {
-  if (typeof actionCreators === "function") {
+  if (typeof actionCreators === 'function') {
     return bindActionCreator(actionCreators, dispatch);
   }
-  if (typeof actionCreators !== "object" || actionCreators === null) {
-    throw new Error( false ? 0 : `bindActionCreators expected an object or a function, but instead received: '${kindOf(actionCreators)}'. Did you write "import ActionCreators from" instead of "import * as ActionCreators from"?`);
+
+  if (typeof actionCreators !== 'object' || actionCreators === null) {
+    throw new Error( false ? 0 : "bindActionCreators expected an object or a function, but instead received: '" + kindOf(actionCreators) + "'. " + "Did you write \"import ActionCreators from\" instead of \"import * as ActionCreators from\"?");
   }
-  const boundActionCreators = {};
-  for (const key in actionCreators) {
-    const actionCreator = actionCreators[key];
-    if (typeof actionCreator === "function") {
+
+  var boundActionCreators = {};
+
+  for (var key in actionCreators) {
+    var actionCreator = actionCreators[key];
+
+    if (typeof actionCreator === 'function') {
       boundActionCreators[key] = bindActionCreator(actionCreator, dispatch);
     }
   }
+
   return boundActionCreators;
 }
 
-// src/compose.ts
-function compose(...funcs) {
-  if (funcs.length === 0) {
-    return (arg) => arg;
+/**
+ * Composes single-argument functions from right to left. The rightmost
+ * function can take multiple arguments as it provides the signature for
+ * the resulting composite function.
+ *
+ * @param {...Function} funcs The functions to compose.
+ * @returns {Function} A function obtained by composing the argument functions
+ * from right to left. For example, compose(f, g, h) is identical to doing
+ * (...args) => f(g(h(...args))).
+ */
+function compose() {
+  for (var _len = arguments.length, funcs = new Array(_len), _key = 0; _key < _len; _key++) {
+    funcs[_key] = arguments[_key];
   }
+
+  if (funcs.length === 0) {
+    return function (arg) {
+      return arg;
+    };
+  }
+
   if (funcs.length === 1) {
     return funcs[0];
   }
-  return funcs.reduce((a, b) => (...args) => a(b(...args)));
+
+  return funcs.reduce(function (a, b) {
+    return function () {
+      return a(b.apply(void 0, arguments));
+    };
+  });
 }
 
-// src/applyMiddleware.ts
-function applyMiddleware(...middlewares) {
-  return (createStore2) => (reducer, preloadedState) => {
-    const store = createStore2(reducer, preloadedState);
-    let dispatch = () => {
-      throw new Error( false ? 0 : "Dispatching while constructing your middleware is not allowed. Other middleware would not be applied to this dispatch.");
-    };
-    const middlewareAPI = {
-      getState: store.getState,
-      dispatch: (action, ...args) => dispatch(action, ...args)
-    };
-    const chain = middlewares.map((middleware) => middleware(middlewareAPI));
-    dispatch = compose(...chain)(store.dispatch);
-    return {
-      ...store,
-      dispatch
+/**
+ * Creates a store enhancer that applies middleware to the dispatch method
+ * of the Redux store. This is handy for a variety of tasks, such as expressing
+ * asynchronous actions in a concise manner, or logging every action payload.
+ *
+ * See `redux-thunk` package as an example of the Redux middleware.
+ *
+ * Because middleware is potentially asynchronous, this should be the first
+ * store enhancer in the composition chain.
+ *
+ * Note that each middleware will be given the `dispatch` and `getState` functions
+ * as named arguments.
+ *
+ * @param {...Function} middlewares The middleware chain to be applied.
+ * @returns {Function} A store enhancer applying the middleware.
+ */
+
+function applyMiddleware() {
+  for (var _len = arguments.length, middlewares = new Array(_len), _key = 0; _key < _len; _key++) {
+    middlewares[_key] = arguments[_key];
+  }
+
+  return function (createStore) {
+    return function () {
+      var store = createStore.apply(void 0, arguments);
+
+      var _dispatch = function dispatch() {
+        throw new Error( false ? 0 : 'Dispatching while constructing your middleware is not allowed. ' + 'Other middleware would not be applied to this dispatch.');
+      };
+
+      var middlewareAPI = {
+        getState: store.getState,
+        dispatch: function dispatch() {
+          return _dispatch.apply(void 0, arguments);
+        }
+      };
+      var chain = middlewares.map(function (middleware) {
+        return middleware(middlewareAPI);
+      });
+      _dispatch = compose.apply(void 0, chain)(store.dispatch);
+      return (0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])((0,_babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__["default"])({}, store), {}, {
+        dispatch: _dispatch
+      });
     };
   };
 }
 
-// src/utils/isAction.ts
-function isAction(action) {
-  return isPlainObject(action) && "type" in action && typeof action.type === "string";
-}
 
-//# sourceMappingURL=redux.mjs.map
+
 
 /***/ }),
 
@@ -48432,10 +50167,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/.pnpm/react-router@6.30.0_react@18.3.1/node_modules/react-router/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/.pnpm/react-router@6.30.0_react@18.3.1/node_modules/react-router/dist/index.js");
 /* harmony import */ var _routesConfig__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./routesConfig */ "./src/routesConfig.js");
 /* harmony import */ var _components_Header__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Header */ "./src/components/Header.js");
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@4.2.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var _store_actionCreators_auth__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/actionCreators/auth */ "./src/store/actionCreators/auth.js");
+
 
 
 
@@ -48449,10 +50186,13 @@ __webpack_require__.r(__webpack_exports__);
 function App(_ref) {
   var store = _ref.store;
   // console.log('🚀 ~ App ~ store:', store)
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_3__.Provider, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_redux__WEBPACK_IMPORTED_MODULE_4__.Provider, {
     store: store
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useRoutes)(_routesConfig__WEBPACK_IMPORTED_MODULE_1__["default"]));
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_Header__WEBPACK_IMPORTED_MODULE_2__["default"], null), (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.useRoutes)(_routesConfig__WEBPACK_IMPORTED_MODULE_1__["default"]));
 }
+App.loadData = function (store) {
+  return store.dispatch(_store_actionCreators_auth__WEBPACK_IMPORTED_MODULE_3__["default"].validate());
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (App);
 
 /***/ }),
@@ -48528,7 +50268,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@4.2.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _store_actionCreators_counter__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/store/actionCreators/counter */ "./src/store/actionCreators/counter.js");
 
 
@@ -48586,7 +50326,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@4.2.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _store_actionCreators_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/store/actionCreators/auth */ "./src/store/actionCreators/auth.js");
 // 登录组件
 
@@ -48630,7 +50370,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_actionCreators_auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/store/actionCreators/auth */ "./src/store/actionCreators/auth.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@4.2.1/node_modules/react-redux/dist/react-redux.mjs");
 
 
 
@@ -48659,13 +50399,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@4.2.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/.pnpm/react-router@6.30.0_react@18.3.1/node_modules/react-router/dist/index.js");
+
 
 
 function Profile() {
   var user = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
     return state.auth.user;
   });
+  var navigate = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_2__.useNavigate)();
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    if (!user) {
+      navigate('/login');
+    }
+  }, []);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "\u5F53\u524D\u767B\u5F55\u7528\u6237"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "name: ", user && user.name));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Profile);
@@ -48715,7 +50463,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _store_actionCreators_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/store/actionCreators/user */ "./src/store/actionCreators/user.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@4.2.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/.pnpm/react-router@6.30.0_react@18.3.1/node_modules/react-router/dist/index.js");
 
 
@@ -48761,7 +50509,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@4.2.1/node_modules/react-redux/dist/react-redux.mjs");
 /* harmony import */ var _store_actionCreators_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/store/actionCreators/user */ "./src/store/actionCreators/user.js");
 
 
@@ -48866,9 +50614,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/.pnpm/axios@1.8.4/node_modules/axios/lib/axios.js");
 
-var request = axios__WEBPACK_IMPORTED_MODULE_0__["default"].create({
-  baseURL: 'http://localhost:3007'
-});
+var request = function request(req) {
+  var cookie = req.get('cookie') || '';
+  return axios__WEBPACK_IMPORTED_MODULE_0__["default"].create({
+    baseURL: 'http://localhost:3007',
+    headers: {
+      cookie: cookie
+    }
+  });
+};
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (request);
 
 /***/ }),
@@ -48913,7 +50667,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action-types */ "./src/store/action-types.js");
+/* harmony import */ var redux_first_history__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-first-history */ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/index.js");
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../action-types */ "./src/store/action-types.js");
+
 
 var actionCreators = {
   login: function login(user) {
@@ -48925,12 +50681,13 @@ var actionCreators = {
           error = _res$data.error;
         if (success) {
           dispatch({
-            type: _action_types__WEBPACK_IMPORTED_MODULE_0__.LOGIN_SUCCESS,
+            type: _action_types__WEBPACK_IMPORTED_MODULE_1__.LOGIN_SUCCESS,
             payload: data // 用户列表的数组
           });
+          dispatch((0,redux_first_history__WEBPACK_IMPORTED_MODULE_0__.push)('/profile'));
         } else {
           dispatch({
-            type: _action_types__WEBPACK_IMPORTED_MODULE_0__.LOGIN_ERROR,
+            type: _action_types__WEBPACK_IMPORTED_MODULE_1__.LOGIN_ERROR,
             payload: error // 失败原因
           });
         }
@@ -48944,9 +50701,26 @@ var actionCreators = {
           data = _res$data2.data,
           success = _res$data2.success,
           error = _res$data2.error;
+        console.log('🚀 ~ returnrequest.post ~ res.data:', res.data);
         if (success) {
           dispatch({
-            type: _action_types__WEBPACK_IMPORTED_MODULE_0__.LOGOUT_SUCCESS,
+            type: _action_types__WEBPACK_IMPORTED_MODULE_1__.LOGOUT_SUCCESS,
+            payload: data // 用户列表的数组
+          });
+          dispatch((0,redux_first_history__WEBPACK_IMPORTED_MODULE_0__.push)('/login'));
+        }
+      });
+    };
+  },
+  validate: function validate() {
+    return function (dispatch, getState, request) {
+      return request.post('/api/validate').then(function (res) {
+        var _res$data3 = res.data,
+          data = _res$data3.data,
+          success = _res$data3.success;
+        if (success) {
+          dispatch({
+            type: _action_types__WEBPACK_IMPORTED_MODULE_1__.LOGIN_SUCCESS,
             payload: data // 用户列表的数组
           });
         }
@@ -49035,16 +50809,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getClientStore: () => (/* binding */ getClientStore),
 /* harmony export */   getServerStore: () => (/* binding */ getServerStore)
 /* harmony export */ });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! redux */ "./node_modules/.pnpm/redux@5.0.1/node_modules/redux/dist/redux.mjs");
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! redux-thunk */ "./node_modules/.pnpm/redux-thunk@2.4.2_redux@5.0.1/node_modules/redux-thunk/es/index.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! redux */ "./node_modules/.pnpm/redux@4.2.1/node_modules/redux/es/redux.js");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! redux-thunk */ "./node_modules/.pnpm/redux-thunk@2.4.2_redux@4.2.1/node_modules/redux-thunk/es/index.js");
 /* harmony import */ var redux_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-promise */ "./node_modules/.pnpm/redux-promise@0.6.0/node_modules/redux-promise/lib/index.js");
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-logger */ "./node_modules/.pnpm/redux-logger@3.0.6/node_modules/redux-logger/dist/redux-logger.js");
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _client_request__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/client/request */ "./src/client/request.js");
 /* harmony import */ var _server_request__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/server/request */ "./src/server/request.js");
-/* harmony import */ var _reducers_counter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./reducers/counter */ "./src/store/reducers/counter.js");
-/* harmony import */ var _reducers_user__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./reducers/user */ "./src/store/reducers/user.js");
-/* harmony import */ var _reducers_auth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./reducers/auth */ "./src/store/reducers/auth.js");
+/* harmony import */ var history__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! history */ "./node_modules/.pnpm/history@5.3.0/node_modules/history/index.js");
+/* harmony import */ var redux_first_history__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux-first-history */ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/build/es6/index.js");
+/* harmony import */ var _reducers_counter__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./reducers/counter */ "./src/store/reducers/counter.js");
+/* harmony import */ var _reducers_user__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./reducers/user */ "./src/store/reducers/user.js");
+/* harmony import */ var _reducers_auth__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./reducers/auth */ "./src/store/reducers/auth.js");
 
 
 
@@ -49054,13 +50830,21 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var reducers = {
-  counter: _reducers_counter__WEBPACK_IMPORTED_MODULE_4__["default"],
-  user: _reducers_user__WEBPACK_IMPORTED_MODULE_5__["default"],
-  auth: _reducers_auth__WEBPACK_IMPORTED_MODULE_6__["default"]
-};
-var combineReducer = (0,redux__WEBPACK_IMPORTED_MODULE_7__.combineReducers)(reducers);
-var logger = (0,redux_logger__WEBPACK_IMPORTED_MODULE_1__.createLogger)();
+// import { createReduxHistory, routerMiddleware, routerReducer } from '@/history'
+
+
+
+
+
+// const reducers = {
+//   counter,
+//   user,
+//   auth,
+//   router: routerReducer,
+// }
+// const combineReducer = combineReducers(reducers)
+// const logger = createLogger()
+
 function getClientStore() {
   // const store = applyMiddleware(
   //   thunk.withExtraArgument(clientRequest),
@@ -49070,12 +50854,50 @@ function getClientStore() {
 
   // 改用服务端的初始值, 将值挂载到 window 全局
   var initialState = window.context.state;
-  var store = (0,redux__WEBPACK_IMPORTED_MODULE_7__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_8__["default"].withExtraArgument(_client_request__WEBPACK_IMPORTED_MODULE_2__["default"]), redux_promise__WEBPACK_IMPORTED_MODULE_0__["default"], logger)(redux__WEBPACK_IMPORTED_MODULE_7__.createStore)(combineReducer, initialState);
-  return store;
+
+  // history
+  var _createReduxHistoryCo = (0,redux_first_history__WEBPACK_IMPORTED_MODULE_4__.createReduxHistoryContext)({
+      history: (0,history__WEBPACK_IMPORTED_MODULE_8__.createBrowserHistory)()
+    }),
+    createReduxHistory = _createReduxHistoryCo.createReduxHistory,
+    routerMiddleware = _createReduxHistoryCo.routerMiddleware,
+    routerReducer = _createReduxHistoryCo.routerReducer;
+  var reducers = {
+    counter: _reducers_counter__WEBPACK_IMPORTED_MODULE_5__["default"],
+    user: _reducers_user__WEBPACK_IMPORTED_MODULE_6__["default"],
+    auth: _reducers_auth__WEBPACK_IMPORTED_MODULE_7__["default"],
+    router: routerReducer
+  };
+  var combineReducer = (0,redux__WEBPACK_IMPORTED_MODULE_9__.combineReducers)(reducers);
+  var logger = (0,redux_logger__WEBPACK_IMPORTED_MODULE_1__.createLogger)();
+  var store = (0,redux__WEBPACK_IMPORTED_MODULE_9__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_10__["default"].withExtraArgument(_client_request__WEBPACK_IMPORTED_MODULE_2__["default"]), redux_promise__WEBPACK_IMPORTED_MODULE_0__["default"], routerMiddleware, logger)(redux__WEBPACK_IMPORTED_MODULE_9__.createStore)(combineReducer, initialState);
+  var history = createReduxHistory(store);
+  return {
+    store: store,
+    history: history
+  };
 }
-function getServerStore() {
-  var store = (0,redux__WEBPACK_IMPORTED_MODULE_7__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_8__["default"].withExtraArgument(_server_request__WEBPACK_IMPORTED_MODULE_3__["default"]), redux_promise__WEBPACK_IMPORTED_MODULE_0__["default"], logger)(redux__WEBPACK_IMPORTED_MODULE_7__.createStore)(combineReducer);
-  return store;
+function getServerStore(req) {
+  var _createReduxHistoryCo2 = (0,redux_first_history__WEBPACK_IMPORTED_MODULE_4__.createReduxHistoryContext)({
+      history: (0,history__WEBPACK_IMPORTED_MODULE_8__.createMemoryHistory)()
+    }),
+    createReduxHistory = _createReduxHistoryCo2.createReduxHistory,
+    routerMiddleware = _createReduxHistoryCo2.routerMiddleware,
+    routerReducer = _createReduxHistoryCo2.routerReducer;
+  var reducers = {
+    counter: _reducers_counter__WEBPACK_IMPORTED_MODULE_5__["default"],
+    user: _reducers_user__WEBPACK_IMPORTED_MODULE_6__["default"],
+    auth: _reducers_auth__WEBPACK_IMPORTED_MODULE_7__["default"],
+    router: routerReducer
+  };
+  var combineReducer = (0,redux__WEBPACK_IMPORTED_MODULE_9__.combineReducers)(reducers);
+  var logger = (0,redux_logger__WEBPACK_IMPORTED_MODULE_1__.createLogger)();
+  var store = (0,redux__WEBPACK_IMPORTED_MODULE_9__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_10__["default"].withExtraArgument((0,_server_request__WEBPACK_IMPORTED_MODULE_3__["default"])(req)), redux_promise__WEBPACK_IMPORTED_MODULE_0__["default"], routerMiddleware, logger)(redux__WEBPACK_IMPORTED_MODULE_9__.createStore)(combineReducer);
+  var history = createReduxHistory(store);
+  return {
+    store: store,
+    history: history
+  };
 }
 
 /***/ }),
@@ -49338,19 +51160,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ "./node_modules/.pnpm/react-dom@18.3.1_react@18.3.1/node_modules/react-dom/client.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/.pnpm/react-router-dom@6.30.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-router-dom/dist/index.js");
-/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @/store */ "./src/store/index.js");
-/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/App */ "./src/App.js");
+/* harmony import */ var redux_first_history_rr6__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! redux-first-history/rr6 */ "./node_modules/.pnpm/redux-first-history@5.2.0_history@5.3.0_redux@4.2.1/node_modules/redux-first-history/rr6/index.js");
+/* harmony import */ var redux_first_history_rr6__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(redux_first_history_rr6__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/store */ "./src/store/index.js");
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @/App */ "./src/App.js");
 
 
 // import Counter from '@/routes/Counter'
+// import { BrowserRouter } from 'react-router-dom'
+// routerV6 用这个
 
 
 
 var root = document.getElementById('root');
-var store = (0,_store__WEBPACK_IMPORTED_MODULE_2__.getClientStore)();
+var _getClientStore = (0,_store__WEBPACK_IMPORTED_MODULE_3__.getClientStore)(),
+  store = _getClientStore.store,
+  history = _getClientStore.history;
 // 客户端进行水合
-(0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.hydrateRoot)(root, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.BrowserRouter, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_App__WEBPACK_IMPORTED_MODULE_3__["default"], {
+(0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.hydrateRoot)(root, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(redux_first_history_rr6__WEBPACK_IMPORTED_MODULE_2__.HistoryRouter, {
+  history: history
+}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_App__WEBPACK_IMPORTED_MODULE_4__["default"], {
   store: store
 })));
 })();

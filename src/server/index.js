@@ -33,8 +33,8 @@ app.use(express.static(path.resolve(__dirname, '../public')))
 import { getServerStore } from '../store'
 
 app.get('*', (req, res) => {
-  const store = getServerStore()
-  // console.log('🚀 ~ app.get ~ store:', store)
+  const { store } = getServerStore(req)
+  console.log('🚀 ~ app.get ~ store:', store)
 
   const routeMatches = matchRoutes(routesConfig, { pathname: req.url })
   if (routeMatches) {
@@ -51,10 +51,13 @@ app.get('*', (req, res) => {
           (error) => error,
         )
       })
-      .filter(Boolean)
+      .concat(App.loadData && App.loadData(store))
+      .filter(Boolean) // 过滤掉 undefined 的 Promise
 
     Promise.all(loadDataPromises).then(
       (data) => {
+        const store222 = store.getState()
+        console.log('🚀 ~ app.get ~ store222 ______--:', store222)
         const html = renderToString(
           <StaticRouter location={req.url}>
             <App store={store} />

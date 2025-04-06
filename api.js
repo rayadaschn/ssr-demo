@@ -37,12 +37,14 @@ app.post('/api/login', (req, res) => {
 app.post('/api/logout', (req, res) => {
   console.log('🚀 ~ app.post ~ req:', req)
   req.session.user = null
-  res.json({ success: true, data: null })
+  res.json({ success: true })
 })
 
 // 有效性校验
-app.get('/api/validate', (req, res) => {
-  const user = req.session.user
+app.post('/api/validate', (req, res) => {
+  const user = req.session?.user
+  console.log('🚀 ~ app.post ~ req.session:', user)
+
   if (user) {
     res.json({ success: true, data: user })
   } else {
