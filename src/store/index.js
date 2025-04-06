@@ -7,10 +7,12 @@ import serverRequest from '@/server/request'
 
 import counter from './reducers/counter'
 import user from './reducers/user'
+import auth from './reducers/auth'
 
 const reducers = {
   counter,
   user,
+  auth,
 }
 const combineReducer = combineReducers(reducers)
 const logger = createLogger()

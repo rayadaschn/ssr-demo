@@ -16,6 +16,7 @@ app.use(
   proxy('http://localhost:3007', {
     proxyReqPathResolver: (req) => {
       console.log('🚀 代理路径:', req.url)
+      console.log('🚀 请求路径:', req.originalUrl)
       return req.originalUrl // 或者 return req.url.replace(/^\/api/, '')
     },
     onError: (err, req, res) => {

@@ -4,6 +4,9 @@ import Counter from './routes/Counter'
 import User from './routes/User'
 import UserAdd from './routes/UserAdd'
 import UserList from './routes/UserList'
+import Login from './routes/Login'
+import Logout from './routes/Logout'
+import Profile from './routes/Profile'
 
 export default [
   {
@@ -16,25 +19,29 @@ export default [
     element: <Counter />,
   },
   {
-    path: '/user/add',
-    element: <UserAdd />,
+    path: '/user',
+    element: <User />,
+    children: [
+      {
+        path: '/user/add',
+        element: <UserAdd />,
+      },
+      {
+        path: '/user/list',
+        element: <UserList />,
+      },
+    ],
   },
   {
-    path: '/user/list',
-    element: <UserList />,
+    path: '/login',
+    element: <Login />,
   },
-  // {
-  //   path: '/user',
-  //   element: <User />,
-  //   children: [
-  //     {
-  //       path: '/user/add',
-  //       element: <UserAdd />,
-  //     },
-  //     {
-  //       path: '/user/list',
-  //       element: <UserList />,
-  //     },
-  //   ],
-  // },
+  {
+    path: '/logout',
+    element: <Logout />,
+  },
+  {
+    path: '/profile',
+    element: <Profile />,
+  },
 ]

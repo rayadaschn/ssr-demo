@@ -16,6 +16,15 @@ function Header() {
       <li>
         <Link to="/user/list">用户列表</Link>
       </li>
+      <li>
+        <Link to="/login">login</Link>
+      </li>
+      <li>
+        <Link to="/logout">logout</Link>
+      </li>
+      <li>
+        <Link to="/profile">profile</Link>
+      </li>
     </ul>
   )
 }

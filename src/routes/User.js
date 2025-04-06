@@ -6,12 +6,13 @@ function User() {
     <div>
       <ul>
         <li>
-          <link to="/user/add">添加用户</link>
+          <Link to="/user/add">添加用户</Link>
         </li>
         <li>
-          <link to="/user/list">用户列表</link>
+          <Link to="/user/list">用户列表</Link>
         </li>
       </ul>
+      <Outlet />
     </div>
   )
 }

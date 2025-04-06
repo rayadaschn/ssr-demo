@@ -48503,7 +48503,13 @@ function Header() {
     to: "/user/add"
   }, "\u6DFB\u52A0\u7528\u6237")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/user/list"
-  }, "\u7528\u6237\u5217\u8868")));
+  }, "\u7528\u6237\u5217\u8868")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/login"
+  }, "login")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/logout"
+  }, "logout")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
+    to: "/profile"
+  }, "profile")));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Header);
 
@@ -48567,6 +48573,105 @@ function Home() {
 
 /***/ }),
 
+/***/ "./src/routes/Login.js":
+/*!*****************************!*\
+  !*** ./src/routes/Login.js ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+/* harmony import */ var _store_actionCreators_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @/store/actionCreators/auth */ "./src/store/actionCreators/auth.js");
+// 登录组件
+
+
+
+function Login() {
+  var nameRef = (0,react__WEBPACK_IMPORTED_MODULE_0__.useRef)('');
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();
+  var handleSubmit = function handleSubmit(e) {
+    e.preventDefault();
+    var name = nameRef.current.value;
+    var user = {
+      name: name
+    };
+    // 派发
+    dispatch(_store_actionCreators_auth__WEBPACK_IMPORTED_MODULE_1__["default"].login(user));
+  };
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("form", {
+    onSubmit: handleSubmit
+  }, "\u7528\u6237\u540D", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    ref: nameRef
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("input", {
+    type: "submit"
+  }));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Login);
+
+/***/ }),
+
+/***/ "./src/routes/Logout.js":
+/*!******************************!*\
+  !*** ./src/routes/Logout.js ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _store_actionCreators_auth__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/store/actionCreators/auth */ "./src/store/actionCreators/auth.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+
+
+
+function Logout() {
+  var dispatch = (0,react_redux__WEBPACK_IMPORTED_MODULE_2__.useDispatch)();
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_1___default().createElement("button", {
+    onClick: function onClick() {
+      dispatch(_store_actionCreators_auth__WEBPACK_IMPORTED_MODULE_0__["default"].logout());
+    }
+  }, "\u9000\u51FA"));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Logout);
+
+/***/ }),
+
+/***/ "./src/routes/Profile.js":
+/*!*******************************!*\
+  !*** ./src/routes/Profile.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/.pnpm/react-redux@9.2.0_react@18.3.1_redux@5.0.1/node_modules/react-redux/dist/react-redux.mjs");
+
+
+function Profile() {
+  var user = (0,react_redux__WEBPACK_IMPORTED_MODULE_1__.useSelector)(function (state) {
+    return state.auth.user;
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h3", null, "\u5F53\u524D\u767B\u5F55\u7528\u6237"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "name: ", user && user.name));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Profile);
+
+/***/ }),
+
 /***/ "./src/routes/User.js":
 /*!****************************!*\
   !*** ./src/routes/User.js ***!
@@ -48580,14 +48685,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/.pnpm/react@18.3.1/node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/.pnpm/react-router-dom@6.30.0_react-dom@18.3.1_react@18.3.1__react@18.3.1/node_modules/react-router-dom/dist/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/.pnpm/react-router@6.30.0_react@18.3.1/node_modules/react-router/dist/index.js");
 
 
 function User() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("ul", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/user/add"
-  }, "\u6DFB\u52A0\u7528\u6237")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
+  }, "\u6DFB\u52A0\u7528\u6237")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__.Link, {
     to: "/user/list"
-  }, "\u7528\u6237\u5217\u8868"))));
+  }, "\u7528\u6237\u5217\u8868"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__.Outlet, null));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (User);
 
@@ -48704,6 +48811,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _routes_User__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./routes/User */ "./src/routes/User.js");
 /* harmony import */ var _routes_UserAdd__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./routes/UserAdd */ "./src/routes/UserAdd.js");
 /* harmony import */ var _routes_UserList__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./routes/UserList */ "./src/routes/UserList.js");
+/* harmony import */ var _routes_Login__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./routes/Login */ "./src/routes/Login.js");
+/* harmony import */ var _routes_Logout__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./routes/Logout */ "./src/routes/Logout.js");
+/* harmony import */ var _routes_Profile__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./routes/Profile */ "./src/routes/Profile.js");
+
+
+
 
 
 
@@ -48718,27 +48831,25 @@ __webpack_require__.r(__webpack_exports__);
   path: '/counter',
   element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_routes_Counter__WEBPACK_IMPORTED_MODULE_2__["default"], null)
 }, {
-  path: '/user/add',
-  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_routes_UserAdd__WEBPACK_IMPORTED_MODULE_4__["default"], null)
+  path: '/user',
+  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_routes_User__WEBPACK_IMPORTED_MODULE_3__["default"], null),
+  children: [{
+    path: '/user/add',
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_routes_UserAdd__WEBPACK_IMPORTED_MODULE_4__["default"], null)
+  }, {
+    path: '/user/list',
+    element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_routes_UserList__WEBPACK_IMPORTED_MODULE_5__["default"], null)
+  }]
 }, {
-  path: '/user/list',
-  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_routes_UserList__WEBPACK_IMPORTED_MODULE_5__["default"], null)
-}
-// {
-//   path: '/user',
-//   element: <User />,
-//   children: [
-//     {
-//       path: '/user/add',
-//       element: <UserAdd />,
-//     },
-//     {
-//       path: '/user/list',
-//       element: <UserList />,
-//     },
-//   ],
-// },
-]);
+  path: '/login',
+  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_routes_Login__WEBPACK_IMPORTED_MODULE_6__["default"], null)
+}, {
+  path: '/logout',
+  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_routes_Logout__WEBPACK_IMPORTED_MODULE_7__["default"], null)
+}, {
+  path: '/profile',
+  element: /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_routes_Profile__WEBPACK_IMPORTED_MODULE_8__["default"], null)
+}]);
 
 /***/ }),
 
@@ -48773,6 +48884,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   ADD: () => (/* binding */ ADD),
 /* harmony export */   ADD_USER: () => (/* binding */ ADD_USER),
+/* harmony export */   LOGIN_ERROR: () => (/* binding */ LOGIN_ERROR),
+/* harmony export */   LOGIN_SUCCESS: () => (/* binding */ LOGIN_SUCCESS),
+/* harmony export */   LOGOUT_SUCCESS: () => (/* binding */ LOGOUT_SUCCESS),
 /* harmony export */   SET_USER_LIST: () => (/* binding */ SET_USER_LIST)
 /* harmony export */ });
 var ADD = 'ADD';
@@ -48780,6 +48894,67 @@ var ADD = 'ADD';
 // 调用接口返回用户列表, 并吧用户列表的数据放置到仓库中
 var SET_USER_LIST = 'SET_USER_LIST';
 var ADD_USER = 'ADD_USER';
+
+// 登录相关
+var LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+var LOGIN_ERROR = 'LOGIN_ERROR';
+var LOGOUT_SUCCESS = 'LOGOUT_SUCCESS';
+
+/***/ }),
+
+/***/ "./src/store/actionCreators/auth.js":
+/*!******************************************!*\
+  !*** ./src/store/actionCreators/auth.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action-types */ "./src/store/action-types.js");
+
+var actionCreators = {
+  login: function login(user) {
+    return function (dispatch, getState, request) {
+      return request.post('/api/login', user).then(function (res) {
+        var _res$data = res.data,
+          data = _res$data.data,
+          success = _res$data.success,
+          error = _res$data.error;
+        if (success) {
+          dispatch({
+            type: _action_types__WEBPACK_IMPORTED_MODULE_0__.LOGIN_SUCCESS,
+            payload: data // 用户列表的数组
+          });
+        } else {
+          dispatch({
+            type: _action_types__WEBPACK_IMPORTED_MODULE_0__.LOGIN_ERROR,
+            payload: error // 失败原因
+          });
+        }
+      });
+    };
+  },
+  logout: function logout() {
+    return function (dispatch, getState, request) {
+      return request.post('/api/logout').then(function (res) {
+        var _res$data2 = res.data,
+          data = _res$data2.data,
+          success = _res$data2.success,
+          error = _res$data2.error;
+        if (success) {
+          dispatch({
+            type: _action_types__WEBPACK_IMPORTED_MODULE_0__.LOGOUT_SUCCESS,
+            payload: data // 用户列表的数组
+          });
+        }
+      });
+    };
+  }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (actionCreators);
 
 /***/ }),
 
@@ -48860,8 +49035,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   getClientStore: () => (/* binding */ getClientStore),
 /* harmony export */   getServerStore: () => (/* binding */ getServerStore)
 /* harmony export */ });
-/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! redux */ "./node_modules/.pnpm/redux@5.0.1/node_modules/redux/dist/redux.mjs");
-/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! redux-thunk */ "./node_modules/.pnpm/redux-thunk@2.4.2_redux@5.0.1/node_modules/redux-thunk/es/index.js");
+/* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! redux */ "./node_modules/.pnpm/redux@5.0.1/node_modules/redux/dist/redux.mjs");
+/* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! redux-thunk */ "./node_modules/.pnpm/redux-thunk@2.4.2_redux@5.0.1/node_modules/redux-thunk/es/index.js");
 /* harmony import */ var redux_promise__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux-promise */ "./node_modules/.pnpm/redux-promise@0.6.0/node_modules/redux-promise/lib/index.js");
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-logger */ "./node_modules/.pnpm/redux-logger@3.0.6/node_modules/redux-logger/dist/redux-logger.js");
 /* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_1__);
@@ -48869,6 +49044,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _server_request__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @/server/request */ "./src/server/request.js");
 /* harmony import */ var _reducers_counter__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./reducers/counter */ "./src/store/reducers/counter.js");
 /* harmony import */ var _reducers_user__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./reducers/user */ "./src/store/reducers/user.js");
+/* harmony import */ var _reducers_auth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./reducers/auth */ "./src/store/reducers/auth.js");
+
 
 
 
@@ -48879,9 +49056,10 @@ __webpack_require__.r(__webpack_exports__);
 
 var reducers = {
   counter: _reducers_counter__WEBPACK_IMPORTED_MODULE_4__["default"],
-  user: _reducers_user__WEBPACK_IMPORTED_MODULE_5__["default"]
+  user: _reducers_user__WEBPACK_IMPORTED_MODULE_5__["default"],
+  auth: _reducers_auth__WEBPACK_IMPORTED_MODULE_6__["default"]
 };
-var combineReducer = (0,redux__WEBPACK_IMPORTED_MODULE_6__.combineReducers)(reducers);
+var combineReducer = (0,redux__WEBPACK_IMPORTED_MODULE_7__.combineReducers)(reducers);
 var logger = (0,redux_logger__WEBPACK_IMPORTED_MODULE_1__.createLogger)();
 function getClientStore() {
   // const store = applyMiddleware(
@@ -48892,13 +49070,57 @@ function getClientStore() {
 
   // 改用服务端的初始值, 将值挂载到 window 全局
   var initialState = window.context.state;
-  var store = (0,redux__WEBPACK_IMPORTED_MODULE_6__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_7__["default"].withExtraArgument(_client_request__WEBPACK_IMPORTED_MODULE_2__["default"]), redux_promise__WEBPACK_IMPORTED_MODULE_0__["default"], logger)(redux__WEBPACK_IMPORTED_MODULE_6__.createStore)(combineReducer, initialState);
+  var store = (0,redux__WEBPACK_IMPORTED_MODULE_7__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_8__["default"].withExtraArgument(_client_request__WEBPACK_IMPORTED_MODULE_2__["default"]), redux_promise__WEBPACK_IMPORTED_MODULE_0__["default"], logger)(redux__WEBPACK_IMPORTED_MODULE_7__.createStore)(combineReducer, initialState);
   return store;
 }
 function getServerStore() {
-  var store = (0,redux__WEBPACK_IMPORTED_MODULE_6__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_7__["default"].withExtraArgument(_server_request__WEBPACK_IMPORTED_MODULE_3__["default"]), redux_promise__WEBPACK_IMPORTED_MODULE_0__["default"], logger)(redux__WEBPACK_IMPORTED_MODULE_6__.createStore)(combineReducer);
+  var store = (0,redux__WEBPACK_IMPORTED_MODULE_7__.applyMiddleware)(redux_thunk__WEBPACK_IMPORTED_MODULE_8__["default"].withExtraArgument(_server_request__WEBPACK_IMPORTED_MODULE_3__["default"]), redux_promise__WEBPACK_IMPORTED_MODULE_0__["default"], logger)(redux__WEBPACK_IMPORTED_MODULE_7__.createStore)(combineReducer);
   return store;
 }
+
+/***/ }),
+
+/***/ "./src/store/reducers/auth.js":
+/*!************************************!*\
+  !*** ./src/store/reducers/auth.js ***!
+  \************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _action_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../action-types */ "./src/store/action-types.js");
+
+var initiateState = {
+  user: null,
+  error: null
+};
+function auth() {
+  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initiateState;
+  var action = arguments.length > 1 ? arguments[1] : undefined;
+  switch (action.type) {
+    case _action_types__WEBPACK_IMPORTED_MODULE_0__.LOGIN_SUCCESS:
+      return {
+        user: action.payload,
+        error: null
+      };
+    case _action_types__WEBPACK_IMPORTED_MODULE_0__.LOGIN_ERROR:
+      return {
+        user: null,
+        error: action.payload
+      };
+    case _action_types__WEBPACK_IMPORTED_MODULE_0__.LOGOUT_SUCCESS:
+      return {
+        user: null,
+        error: null
+      };
+    default:
+      return state;
+  }
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (auth);
 
 /***/ }),
 
