@@ -1139,7 +1139,6 @@ app.use(express["static"](path.resolve(__dirname, '../public')));
 app.get('*', function (req, res) {
   var _getServerStore = (0,_store__WEBPACK_IMPORTED_MODULE_6__.getServerStore)(req),
     store = _getServerStore.store;
-  console.log('🚀 ~ app.get ~ store:', store);
   var routeMatches = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_5__.matchRoutes)(_routesConfig__WEBPACK_IMPORTED_MODULE_4__["default"], {
     pathname: req.url
   });
@@ -1159,8 +1158,6 @@ app.get('*', function (req, res) {
     }).concat(_App__WEBPACK_IMPORTED_MODULE_2__["default"].loadData && _App__WEBPACK_IMPORTED_MODULE_2__["default"].loadData(store)).filter(Boolean); // 过滤掉 undefined 的 Promise
 
     Promise.all(loadDataPromises).then(function (data) {
-      var store222 = store.getState();
-      console.log('🚀 ~ app.get ~ store222 ______--:', store222);
       var html = (0,react_dom_server__WEBPACK_IMPORTED_MODULE_1__.renderToString)(/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_router_dom_server__WEBPACK_IMPORTED_MODULE_3__.StaticRouter, {
         location: req.url
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_App__WEBPACK_IMPORTED_MODULE_2__["default"], {

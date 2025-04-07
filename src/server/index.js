@@ -34,7 +34,6 @@ import { getServerStore } from '../store'
 
 app.get('*', (req, res) => {
   const { store } = getServerStore(req)
-  console.log('🚀 ~ app.get ~ store:', store)
 
   const routeMatches = matchRoutes(routesConfig, { pathname: req.url })
   if (routeMatches) {
@@ -56,8 +55,6 @@ app.get('*', (req, res) => {
 
     Promise.all(loadDataPromises).then(
       (data) => {
-        const store222 = store.getState()
-        console.log('🚀 ~ app.get ~ store222 ______--:', store222)
         const html = renderToString(
           <StaticRouter location={req.url}>
             <App store={store} />
